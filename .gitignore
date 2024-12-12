@@ -1,0 +1,33 @@
+# General ignores
+*.log
+*.tmp
+*.swp
+.DS_Store
+
+# Rust build artifacts
+target/
+**/target/
+
+# Submodule build artifacts
+sp1/target/
+risc0/target/
+jolt/target/
+nexus/target/
+ceno/target/
+
+# Cargo-specific files
+Cargo.lock
+
+# IDE/editor settings and files
+.idea/
+.vscode/
+*.iml
+
+# Temporary files
+*.bak
+*.orig
+
+# Other
+node_modules/
+npm-debug.log
+

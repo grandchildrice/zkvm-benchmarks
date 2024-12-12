@@ -1,0 +1,15 @@
+[submodule "sp1"]
+	path = sp1
+	url = https://github.com/succinctlabs/sp1
+[submodule "risc0"]
+	path = risc0
+	url = https://github.com/risc0/risc0
+[submodule "jolt"]
+	path = jolt
+	url = https://github.com/a16z/jolt
+[submodule "nexus"]
+	path = nexus
+	url = https://github.com/nexus-xyz/nexus-zkvm
+[submodule "ceno"]
+	path = ceno
+	url = https://github.com/scroll-tech/ceno
