@@ -87,8 +87,5 @@ To fetch the latest updates for all submodules:
 git submodule foreach git pull origin main
 ```
 
-## Makefile
-The repository includes a Makefile to simplify running benchmarks. Update `example_name` in the Makefile to the desired example names specific to each submodule.
-
 ## License
 Refer to the individual submodules for their respective licenses.
