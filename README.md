@@ -38,9 +38,8 @@ sp1up
 
 #### Install RISC Zero
 ```
-cargo install cargo-binstall
-cargo binstall cargo-risczero
-cargo risczero install
+curl -L https://risczero.com/install | bash
+rzup install
 ```
 
 #### Install Jolt
@@ -52,6 +51,12 @@ rustup target add riscv32i-unknown-none-elf
 ```
 rustup target add riscv32i-unknown-none-elf
 cargo install --git https://github.com/nexus-xyz/nexus-zkvm cargo-nexus --tag 'v0.2.4'
+```
+
+#### Install Ceno
+```
+cargo install cargo-make
+rustup target add riscv32im-unknown-none-elf
 ```
 
 ### Run All Examples

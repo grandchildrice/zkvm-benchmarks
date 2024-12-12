@@ -3,19 +3,19 @@
 all: sp1 risc0 jolt nexus ceno
 
 sp1:
-	cd sp1 && cargo run --example example_name
+	cd sp1/examples/fibonacci/program && cargo prove build && cd ../script && cargo run --release
 
 risc0:
-	cd risc0 && cargo run --example example_name
+	cd risc0/benchmarks && cargo run --release -- fibonacci
 
 jolt:
-	cd jolt && cargo run --example example_name
+	cd jolt && cargo run -p jolt-core --release -- trace --name fibonacci --format chrome --pcs hyper-kzg
 
 nexus:
-	cd nexus && cargo run --example example_name
+	cd nexus/examples && RUST_LOG=debug cargo run -r --bin fib3
 
 ceno:
-	cd ceno && cargo run --example example_name
+	cd ceno/ceno_zkvm && cargo bench fibonacci
 
 clean:
 	cd sp1 && cargo clean
