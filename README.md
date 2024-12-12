@@ -15,7 +15,7 @@ The following ZKVM projects are included as submodules:
 
 1. Clone the repository:
    ```bash
-   git clone --recursive <repository-url>
+   git clone --recursive git@github.com:grandchildrice/zkvm-benchmarks.git
    cd zkvm-benchmarks
    ```
 
