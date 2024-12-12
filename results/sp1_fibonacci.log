@@ -16,12 +16,16 @@ Check that the patched package version and available features are compatible
 with the dependency requirements. If the patch has a different version from
 what is locked in the Cargo.lock file, run `cargo update` to use the new
 version. This may also occur with an optional dependency that is not enabled.
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
    Compiling sp1-sdk v3.0.0 (/Users/masatotsutsumi/zkvm-benchmarks/sp1/crates/sdk)
 warning: fibonacci-script@1.1.0: fibonacci-program built at 2024-12-12 15:16:57
    Compiling fibonacci-script v1.1.0 (/Users/masatotsutsumi/zkvm-benchmarks/sp1/examples/fibonacci/script)
-    Finished `release` profile [optimized] target(s) in 21.23s
+    Finished `release` profile [optimized] target(s) in 22.03s
      Running `/Users/masatotsutsumi/zkvm-benchmarks/sp1/examples/target/release/fibonacci-script`
 executed program with 13408 cycles
+n = 1000, prover time = 7.532161s
 generated proof
 a: 5965
 b: 3651

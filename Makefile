@@ -4,7 +4,7 @@ all: sp1 risc0 jolt nexus ceno
 
 sp1:
 	cd sp1/examples/fibonacci/program && cargo prove build && \
-	cd ../script && cargo run --release >> ../../../../results/sp1_fibonacci.log 2>&1
+	cd ../script && cargo run --release > ../../../../results/sp1_fibonacci.log 2>&1
 
 risc0:
 	cd risc0/benchmarks && cargo run --release -- fibonacci > ../../results/risc0_fibonacci.log 2>&1
