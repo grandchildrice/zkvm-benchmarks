@@ -28,6 +28,32 @@ The following ZKVM projects are included as submodules:
 
 ## Usage
 
+### Installation
+
+#### Install SP1
+```
+curl -L https://sp1.succinct.xyz | bash
+sp1up
+```
+
+#### Install RISC Zero
+```
+cargo install cargo-binstall
+cargo binstall cargo-risczero
+cargo risczero install
+```
+
+#### Install Jolt
+```
+rustup target add riscv32i-unknown-none-elf
+```
+
+#### Install Nexus
+```
+rustup target add riscv32i-unknown-none-elf
+cargo install --git https://github.com/nexus-xyz/nexus-zkvm cargo-nexus --tag 'v0.2.4'
+```
+
 ### Run All Examples
 Run all examples from every submodule using the Makefile:
 ```bash
