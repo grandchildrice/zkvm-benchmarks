@@ -1,0 +1,28 @@
+warning: /Users/masatotsutsumi/zkvm-benchmarks/sp1/examples/tendermint/script/Cargo.toml: `default-features` is ignored for serde_json, since `default-features` was not specified for `workspace.dependencies.serde_json`, this could become a hard error in the future
+warning: Patch `sha2 v0.10.6 (https://github.com/sp1-patches/RustCrypto-hashes?tag=sha2-v0.10.6-patch-v1#e5f8b7ea)` was not used in the crate graph.
+Perhaps you misspelled the source URL being patched.
+Possible URLs for `[patch.<URL>]`:
+    https://github.com/sp1-patches/RustCrypto-hashes.git
+    https://github.com/sp1-patches/RustCrypto-hashes
+    https://github.com/sp1-patches/RustCrypto-hashes
+warning: Patch `sha2 v0.9.8 (https://github.com/sp1-patches/RustCrypto-hashes?tag=sha2-v0.9.8-patch-v1#afdbfb09)` was not used in the crate graph.
+Perhaps you misspelled the source URL being patched.
+Possible URLs for `[patch.<URL>]`:
+    https://github.com/sp1-patches/RustCrypto-hashes.git
+    https://github.com/sp1-patches/RustCrypto-hashes
+    https://github.com/sp1-patches/RustCrypto-hashes
+warning: Patch `ecdsa v0.16.8 (https://github.com/sp1-patches/signatures?branch=umadayal/secp256r1#49b62884)` was not used in the crate graph.
+Check that the patched package version and available features are compatible
+with the dependency requirements. If the patch has a different version from
+what is locked in the Cargo.lock file, run `cargo update` to use the new
+version. This may also occur with an optional dependency that is not enabled.
+   Compiling sp1-sdk v3.0.0 (/Users/masatotsutsumi/zkvm-benchmarks/sp1/crates/sdk)
+warning: fibonacci-script@1.1.0: fibonacci-program built at 2024-12-12 15:16:57
+   Compiling fibonacci-script v1.1.0 (/Users/masatotsutsumi/zkvm-benchmarks/sp1/examples/fibonacci/script)
+    Finished `release` profile [optimized] target(s) in 21.23s
+     Running `/Users/masatotsutsumi/zkvm-benchmarks/sp1/examples/target/release/fibonacci-script`
+executed program with 13408 cycles
+generated proof
+a: 5965
+b: 3651
+successfully generated and verified proof for the program!

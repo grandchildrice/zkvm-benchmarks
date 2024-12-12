@@ -1,0 +1,2 @@
+    Finished `release` profile [optimized] target(s) in 0.21s
+     Running `nexus-run /Users/masatotsutsumi/zkvm-benchmarks/nexus/target/riscv32i-unknown-none-elf/release/fib3`

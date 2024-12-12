@@ -1,0 +1,19 @@
+   Compiling risc0-benchmark-methods v0.1.0 (/Users/masatotsutsumi/zkvm-benchmarks/risc0/benchmarks/methods)
+   Compiling risc0-benchmark v0.1.0 (/Users/masatotsutsumi/zkvm-benchmarks/risc0/benchmarks)
+    Finished `release` profile [optimized + debuginfo] target(s) in 50.79s
+     Running `target/release/risc0-benchmark fibonacci`
+Benchmarking fibonacci-10
+ + 4.5/s
+Benchmarking fibonacci-50
+ + 22.7/s
+Benchmarking fibonacci-90
+ + 41.6/s
+┌──────────────┬──────┬────────┬───────────────┬────────────────┬────────────────┬─────────────────┬──────────────┬─────────────┬──────────────┬─────────────┐
+│ name         │ size │ speed  │ exec_duration │ proof_duration │ total_duration │ verify_duration │ total_cycles │ user_cycles │ output_bytes │ proof_bytes │
+├──────────────┼──────┼────────┼───────────────┼────────────────┼────────────────┼─────────────────┼──────────────┼─────────────┼──────────────┼─────────────┤
+│ fibonacci-10 │ 10   │ 4.5/s  │ 4.6ms         │ 2.23s          │ 2.24s          │ 12.7ms          │ 64K          │ 2.2K        │ 8B           │ 217.4KB     │
+├──────────────┼──────┼────────┼───────────────┼────────────────┼────────────────┼─────────────────┼──────────────┼─────────────┼──────────────┼─────────────┤
+│ fibonacci-50 │ 50   │ 22.7/s │ 3ms           │ 2.2s           │ 2.2s           │ 12.7ms          │ 64K          │ 2.3K        │ 8B           │ 217.4KB     │
+├──────────────┼──────┼────────┼───────────────┼────────────────┼────────────────┼─────────────────┼──────────────┼─────────────┼──────────────┼─────────────┤
+│ fibonacci-90 │ 90   │ 41.6/s │ 3ms           │ 2.16s          │ 2.16s          │ 12.5ms          │ 64K          │ 2.4K        │ 8B           │ 217.4KB     │
+└──────────────┴──────┴────────┴───────────────┴────────────────┴────────────────┴─────────────────┴──────────────┴─────────────┴──────────────┴─────────────┘

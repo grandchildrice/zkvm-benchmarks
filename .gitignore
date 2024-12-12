@@ -1,5 +1,4 @@
 # General ignores
-*.log
 *.tmp
 *.swp
 .DS_Store

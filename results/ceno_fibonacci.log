@@ -1,0 +1,110 @@
+    Finished `bench` profile [optimized] target(s) in 0.25s
+     Running unittests src/lib.rs (/Users/masatotsutsumi/zkvm-benchmarks/ceno/target/release/deps/ceno_zkvm-138871fcc7396a14)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 116 filtered out; finished in 0.00s
+
+     Running unittests src/bin/e2e.rs (/Users/masatotsutsumi/zkvm-benchmarks/ceno/target/release/deps/e2e-d6ce93a8c120f016)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/riscv_stats.rs (/Users/masatotsutsumi/zkvm-benchmarks/ceno/target/release/deps/riscv_stats-7bdafa23fe3b6ac5)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running benches/fibonacci.rs (/Users/masatotsutsumi/zkvm-benchmarks/ceno/target/release/deps/fibonacci-6f8af840b5a3cdd2)
+Gnuplot not found, using plotters backend
+Benchmarking fibonacci_max_steps_1048576/prove_fibonacci/fibonacci_max_steps_1048576
+Benchmarking fibonacci_max_steps_1048576/prove_fibonacci/fibonacci_max_steps_1048576: Warming up for 20.000 s
+Fibonacci::create_proof, max_steps = 1048576, time = 5.7783380829999995
+Fibonacci::create_proof, max_steps = 1048576, time = 5.874444459
+Fibonacci::create_proof, max_steps = 1048576, time = 5.931007792
+
+Warning: Unable to complete 10 samples in 5.0s. You may wish to increase target time to 129.7s.
+Benchmarking fibonacci_max_steps_1048576/prove_fibonacci/fibonacci_max_steps_1048576: Collecting 10 samples in estimated 129.68 s (10 iterations)
+Fibonacci::create_proof, max_steps = 1048576, time = 5.701795292
+Fibonacci::create_proof, max_steps = 1048576, time = 6.120106917
+Fibonacci::create_proof, max_steps = 1048576, time = 5.8352604580000005
+Fibonacci::create_proof, max_steps = 1048576, time = 5.819720333
+Fibonacci::create_proof, max_steps = 1048576, time = 5.833833
+Fibonacci::create_proof, max_steps = 1048576, time = 5.826069125
+Fibonacci::create_proof, max_steps = 1048576, time = 5.836177042
+Fibonacci::create_proof, max_steps = 1048576, time = 5.911128333
+Fibonacci::create_proof, max_steps = 1048576, time = 5.780771208
+Fibonacci::create_proof, max_steps = 1048576, time = 5.710605291
+Benchmarking fibonacci_max_steps_1048576/prove_fibonacci/fibonacci_max_steps_1048576: Analyzing
+fibonacci_max_steps_1048576/prove_fibonacci/fibonacci_max_steps_1048576
+                        time:   [5.7764 s 5.8376 s 5.9119 s]
+                        change: [-25.125% -9.0795% +2.6193%] (p = 0.61 > 0.05)
+                        No change in performance detected.
+Found 4 outliers among 10 measurements (40.00%)
+  2 (20.00%) low mild
+  1 (10.00%) high mild
+  1 (10.00%) high severe
+
+Benchmarking fibonacci_max_steps_2097152/prove_fibonacci/fibonacci_max_steps_2097152
+Benchmarking fibonacci_max_steps_2097152/prove_fibonacci/fibonacci_max_steps_2097152: Warming up for 20.000 s
+Fibonacci::create_proof, max_steps = 2097152, time = 9.788580084
+Fibonacci::create_proof, max_steps = 2097152, time = 9.830260083
+Fibonacci::create_proof, max_steps = 2097152, time = 10.087806958
+
+Warning: Unable to complete 10 samples in 5.0s. You may wish to increase target time to 170.5s.
+Benchmarking fibonacci_max_steps_2097152/prove_fibonacci/fibonacci_max_steps_2097152: Collecting 10 samples in estimated 170.52 s (10 iterations)
+Fibonacci::create_proof, max_steps = 2097152, time = 9.741592542
+Fibonacci::create_proof, max_steps = 2097152, time = 24.977056458
+Fibonacci::create_proof, max_steps = 2097152, time = 10.603559875
+Fibonacci::create_proof, max_steps = 2097152, time = 9.74758275
+Fibonacci::create_proof, max_steps = 2097152, time = 11.35505275
+Fibonacci::create_proof, max_steps = 2097152, time = 9.751308083
+Fibonacci::create_proof, max_steps = 2097152, time = 9.861455
+Fibonacci::create_proof, max_steps = 2097152, time = 11.518253041
+Fibonacci::create_proof, max_steps = 2097152, time = 61.05134975
+Fibonacci::create_proof, max_steps = 2097152, time = 9.81211025
+Benchmarking fibonacci_max_steps_2097152/prove_fibonacci/fibonacci_max_steps_2097152: Analyzing
+fibonacci_max_steps_2097152/prove_fibonacci/fibonacci_max_steps_2097152
+                        time:   [10.114 s 16.842 s 27.182 s]
+                        change: [+0.9318% +66.720% +163.98%] (p = 0.18 > 0.05)
+                        No change in performance detected.
+Found 2 outliers among 10 measurements (20.00%)
+  2 (20.00%) high severe
+
+Benchmarking fibonacci_max_steps_4194304/prove_fibonacci/fibonacci_max_steps_4194304
+Benchmarking fibonacci_max_steps_4194304/prove_fibonacci/fibonacci_max_steps_4194304: Warming up for 20.000 s
+Fibonacci::create_proof, max_steps = 4194304, time = 18.20619875
+
+Warning: Unable to complete 10 samples in 5.0s. You may wish to increase target time to 251.8s.
+Benchmarking fibonacci_max_steps_4194304/prove_fibonacci/fibonacci_max_steps_4194304: Collecting 10 samples in estimated 251.85 s (10 iterations)
+Fibonacci::create_proof, max_steps = 4194304, time = 18.030078292
+Fibonacci::create_proof, max_steps = 4194304, time = 24.362833875
+Fibonacci::create_proof, max_steps = 4194304, time = 18.211016
+Fibonacci::create_proof, max_steps = 4194304, time = 19.502219417
+Fibonacci::create_proof, max_steps = 4194304, time = 56.826461208
+Fibonacci::create_proof, max_steps = 4194304, time = 26.996689792
+Fibonacci::create_proof, max_steps = 4194304, time = 18.093782083
+Fibonacci::create_proof, max_steps = 4194304, time = 18.00278975
+Fibonacci::create_proof, max_steps = 4194304, time = 17.950914875
+Fibonacci::create_proof, max_steps = 4194304, time = 18.275546958
+Benchmarking fibonacci_max_steps_4194304/prove_fibonacci/fibonacci_max_steps_4194304: Analyzing
+fibonacci_max_steps_4194304/prove_fibonacci/fibonacci_max_steps_4194304
+                        time:   [18.533 s 23.625 s 31.731 s]
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high severe
+
+     Running benches/fibonacci_witness.rs (/Users/masatotsutsumi/zkvm-benchmarks/ceno/target/release/deps/fibonacci_witness-2d1a5c12fd6ffa4c)
+Gnuplot not found, using plotters backend
+Benchmarking fib_wit_max_steps_18446744073709551615/fibonacci_witness/fib_wit_max_steps_18446744073709551615
+Benchmarking fib_wit_max_steps_18446744073709551615/fibonacci_witness/fib_wit_max_steps_18446744073709551615: Warming up for 20.000 s
+
+Warning: Unable to complete 10 samples in 5.0s. You may wish to increase target time to 82.9s.
+Benchmarking fib_wit_max_steps_18446744073709551615/fibonacci_witness/fib_wit_max_steps_18446744073709551615: Collecting 10 samples in estimated 82.861 s (10 iterations)
+Benchmarking fib_wit_max_steps_18446744073709551615/fibonacci_witness/fib_wit_max_steps_18446744073709551615: Analyzing
+fib_wit_max_steps_18446744073709551615/fibonacci_witness/fib_wit_max_steps_18446744073709551615
+                        time:   [1.2816 s 1.3060 s 1.3327 s]
+
+     Running benches/riscv_add.rs (/Users/masatotsutsumi/zkvm-benchmarks/ceno/target/release/deps/riscv_add-95cabfcb7e2ea3ce)
+Gnuplot not found, using plotters backend
