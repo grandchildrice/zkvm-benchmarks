@@ -1,8 +1,14 @@
 .PHONY: all sp1 risc0 jolt nexus ceno clean
 
 sp1-fib:
-	cd sp1/examples/fibonacci/program && cargo prove build && \
-	cd ../script && gtime -v cargo run --release > ../../../../results/sp1_fibonacci.log 2>&1
+	cd sp1_main/examples/fibonacci/program && cargo prove build && \
+	cd ../script && \
+	gtime -v cargo run --release -- 10 > ../../../../results/sp1_fibonacci_n10.log 2>&1 && \
+	gtime -v cargo run --release -- 100 > ../../../../results/sp1_fibonacci_n100.log 2>&1 && \
+	gtime -v cargo run --release -- 1000 > ../../../../results/sp1_fibonacci_n1000.log 2>&1 && \
+	gtime -v cargo run --release -- 10000 > ../../../../results/sp1_fibonacci_n10000.log 2>&1 && \
+	gtime -v cargo run --release -- 100000 > ../../../../results/sp1_fibonacci_n100000.log 2>&1 && \
+	gtime -v cargo run --release -- 1000000 > ../../../../results/sp1_fibonacci_n1000000.log 2>&1
 
 risc0-fib:
 	cd risc0/benchmarks && gtime -v cargo run --release -- fibonacci > ../../results/risc0_fibonacci.log 2>&1 && \

@@ -1,81 +1,132 @@
-warning: /Users/masatotsutsumi/zkvm-benchmarks/sp1/examples/tendermint/script/Cargo.toml: `default-features` is ignored for serde_json, since `default-features` was not specified for `workspace.dependencies.serde_json`, this could become a hard error in the future
 warning: Patch `sha2 v0.10.6 (https://github.com/sp1-patches/RustCrypto-hashes?tag=sha2-v0.10.6-patch-v1#e5f8b7ea)` was not used in the crate graph.
 Perhaps you misspelled the source URL being patched.
 Possible URLs for `[patch.<URL>]`:
     https://github.com/sp1-patches/RustCrypto-hashes
-    https://github.com/sp1-patches/RustCrypto-hashes.git
     https://github.com/sp1-patches/RustCrypto-hashes
+    https://github.com/sp1-patches/RustCrypto-hashes.git
 warning: Patch `sha2 v0.9.8 (https://github.com/sp1-patches/RustCrypto-hashes?tag=sha2-v0.9.8-patch-v1#afdbfb09)` was not used in the crate graph.
 Perhaps you misspelled the source URL being patched.
 Possible URLs for `[patch.<URL>]`:
     https://github.com/sp1-patches/RustCrypto-hashes
-    https://github.com/sp1-patches/RustCrypto-hashes.git
     https://github.com/sp1-patches/RustCrypto-hashes
-warning: Patch `ecdsa v0.16.8 (https://github.com/sp1-patches/signatures?branch=umadayal/secp256r1#49b62884)` was not used in the crate graph.
+    https://github.com/sp1-patches/RustCrypto-hashes.git
+warning: Patch `bls12_381 v0.8.0 (https://github.com/sp1-patches/bls12_381?tag=bls12_381-v0.8.0-patch-v1#444e1092)` was not used in the crate graph.
+Patch `ecdsa v0.16.8 (https://github.com/sp1-patches/signatures?branch=umadayal/secp256r1#49b62884)` was not used in the crate graph.
 Check that the patched package version and available features are compatible
 with the dependency requirements. If the patch has a different version from
 what is locked in the Cargo.lock file, run `cargo update` to use the new
 version. This may also occur with an optional dependency that is not enabled.
-   Compiling sp1-sdk v3.0.0 (/Users/masatotsutsumi/zkvm-benchmarks/sp1/crates/sdk)
-warning: fibonacci-script@1.1.0: fibonacci-program built at 2024-12-12 15:16:57
-   Compiling fibonacci-script v1.1.0 (/Users/masatotsutsumi/zkvm-benchmarks/sp1/examples/fibonacci/script)
-    Finished `release` profile [optimized] target(s) in 22.77s
-     Running `/Users/masatotsutsumi/zkvm-benchmarks/sp1/examples/target/release/fibonacci-script`
-executed program with 13408 cycles
-opcode counts (13408 total instructions):
-    6406 add
-    1044 bne
-    1019 srl
-    1016 sub
-    1003 mul
-    1000 sra
-    1000 mulh
-     257 sw
-     126 lw
-      93 or
-      76 sll
-      76 lbu
-      59 and
-      51 jalr
-      43 bltu
-      31 sb
-      29 auipc
-      24 ecall
-      23 beq
-      16 jal
-       9 sltu
-       5 bgeu
-       2 xor
-syscall counts (24 total syscall instructions):
-    8 commit
-    8 commit_deferred_proofs
-    3 write
-    1 halt
-    1 hint_len
-    1 hint_read
-    1 sha_compress
-    1 sha_extend
+warning: use of deprecated function `hook::hook_ecrecover`: Use `hook_ecrecover_v2` instead.
+  --> /Users/masatotsutsumi/zkvm-benchmarks/sp1_main/crates/core/executor/src/hook.rs:86:41
+   |
+86 |             (FD_ECRECOVER_HOOK, hookify(hook_ecrecover)),
+   |                                         ^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(deprecated)]` on by default
 
-n = 1000, prover time = 7.83158125s
+warning: `sp1-core-executor` (lib) generated 1 warning
+   Compiling sp1-sdk v3.4.0 (/Users/masatotsutsumi/zkvm-benchmarks/sp1_main/crates/sdk)
+warning: fibonacci-script@1.1.0: fibonacci-program built at 2024-12-19 19:53:26
+   Compiling fibonacci-script v1.1.0 (/Users/masatotsutsumi/zkvm-benchmarks/sp1_main/examples/fibonacci/script)
+    Finished `release` profile [optimized] target(s) in 20.98s
+     Running `/Users/masatotsutsumi/zkvm-benchmarks/sp1_main/examples/target/release/fibonacci-script 10`
+executed program with 1528 cycles
+opcode counts (1528 total instructions):
+  466 add
+  257 sw
+  126 lw
+   93 or
+   76 sll
+   76 lbu
+   59 and
+   54 bne
+   51 jalr
+   43 bltu
+   31 sb
+   29 srl
+   29 auipc
+   26 sub
+   24 ecall
+   23 beq
+   16 jal
+   13 mul
+   10 sra
+   10 mulh
+    9 sltu
+    5 bgeu
+    2 xor
+    0 slt
+    0 lb
+    0 lh
+    0 lhu
+    0 sh
+    0 blt
+    0 bge
+    0 ebreak
+    0 mulhu
+    0 mulhsu
+    0 div
+    0 divu
+    0 rem
+    0 remu
+    0 unimp
+syscall counts (24 total syscall instructions):
+  8 commit
+  8 commit_deferred_proofs
+  3 write
+  1 halt
+  1 hint_len
+  1 hint_read
+  1 sha_compress
+  1 sha_extend
+  0 enter_unconstrained
+  0 exit_unconstrained
+  0 verify_sp1_proof
+  0 ed_decompress
+  0 secp256k1_double
+  0 secp256k1_decompress
+  0 bn254_double
+  0 bls12381_decompress
+  0 bls12381_double
+  0 ed_add
+  0 keccak_permute
+  0 secp256k1_add
+  0 bn254_add
+  0 uint256_mul
+  0 bls12381_add
+  0 bls12381_fp_add
+  0 bls12381_fp_sub
+  0 bls12381_fp_mul
+  0 bls12381_fp2_add
+  0 bls12381_fp2_sub
+  0 bls12381_fp2_mul
+  0 bn254_fp_add
+  0 bn254_fp_sub
+  0 bn254_fp_mul
+  0 bn254_fp2_add
+  0 bn254_fp2_sub
+  0 bn254_fp2_mul
+
+n = 10, proof generation took: 57.820124875s
 generated proof
-a: 5965
-b: 3651
+a: 55
+b: 89
 successfully generated and verified proof for the program!
-	Command being timed: "cargo run --release"
-	User time (seconds): 87.04
-	System time (seconds): 4.06
-	Percent of CPU this job got: 261%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:34.89
+	Command being timed: "cargo run --release -- 10"
+	User time (seconds): 571.62
+	System time (seconds): 14.70
+	Percent of CPU this job got: 721%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:21.26
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 3586272
+	Maximum resident set size (kbytes): 9834672
 	Average resident set size (kbytes): 0
 	Major (requiring I/O) page faults: 20
-	Minor (reclaiming a frame) page faults: 261946
-	Voluntary context switches: 14
-	Involuntary context switches: 102552
+	Minor (reclaiming a frame) page faults: 1773259
+	Voluntary context switches: 4
+	Involuntary context switches: 492154
 	Swaps: 0
 	File system inputs: 0
 	File system outputs: 0

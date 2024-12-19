@@ -13,3 +13,7 @@
 [submodule "ceno"]
 	path = ceno
 	url = https://github.com/scroll-tech/ceno
+[submodule "sp1_main"]
+	path = sp1_main
+	url = git@github.com:succinctlabs/sp1.git
+	branch = main
