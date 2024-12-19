@@ -1,0 +1,34 @@
+   Compiling risc0-benchmark-methods v0.1.0 (/Users/masatotsutsumi/zkvm-benchmarks/risc0/benchmarks/methods)
+   Compiling risc0-benchmark v0.1.0 (/Users/masatotsutsumi/zkvm-benchmarks/risc0/benchmarks)
+    Finished `release` profile [optimized + debuginfo] target(s) in 49.00s
+     Running `target/release/risc0-benchmark ecdsa-verify`
+Benchmarking ecdsa_verify
+ + 8.8/min
+┌──────────────┬──────┬─────────┬───────────────┬────────────────┬────────────────┬─────────────────┬──────────────┬─────────────┬──────────────┬─────────────┬────────────┐
+│ name         │ size │ speed   │ exec_duration │ proof_duration │ total_duration │ verify_duration │ total_cycles │ user_cycles │ output_bytes │ proof_bytes │ max_memory │
+├──────────────┼──────┼─────────┼───────────────┼────────────────┼────────────────┼─────────────────┼──────────────┼─────────────┼──────────────┼─────────────┼────────────┤
+│ ecdsa_verify │ 1    │ 8.8/min │ 63.2ms        │ 6.79s          │ 6.85s          │ 12.5ms          │ 512K         │ 222K        │ 408B         │ 217.4KB     │ 37.2MB     │
+└──────────────┴──────┴─────────┴───────────────┴────────────────┴────────────────┴─────────────────┴──────────────┴─────────────┴──────────────┴─────────────┴────────────┘
+	Command being timed: "cargo run --release -- ecdsa-verify"
+	User time (seconds): 7.48
+	System time (seconds): 0.68
+	Percent of CPU this job got: 14%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:56.74
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1232048
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 15
+	Minor (reclaiming a frame) page faults: 134558
+	Voluntary context switches: 16
+	Involuntary context switches: 7679
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0

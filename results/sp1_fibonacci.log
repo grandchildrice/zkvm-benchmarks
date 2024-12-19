@@ -2,31 +2,85 @@ warning: /Users/masatotsutsumi/zkvm-benchmarks/sp1/examples/tendermint/script/Ca
 warning: Patch `sha2 v0.10.6 (https://github.com/sp1-patches/RustCrypto-hashes?tag=sha2-v0.10.6-patch-v1#e5f8b7ea)` was not used in the crate graph.
 Perhaps you misspelled the source URL being patched.
 Possible URLs for `[patch.<URL>]`:
-    https://github.com/sp1-patches/RustCrypto-hashes.git
     https://github.com/sp1-patches/RustCrypto-hashes
+    https://github.com/sp1-patches/RustCrypto-hashes.git
     https://github.com/sp1-patches/RustCrypto-hashes
 warning: Patch `sha2 v0.9.8 (https://github.com/sp1-patches/RustCrypto-hashes?tag=sha2-v0.9.8-patch-v1#afdbfb09)` was not used in the crate graph.
 Perhaps you misspelled the source URL being patched.
 Possible URLs for `[patch.<URL>]`:
-    https://github.com/sp1-patches/RustCrypto-hashes.git
     https://github.com/sp1-patches/RustCrypto-hashes
+    https://github.com/sp1-patches/RustCrypto-hashes.git
     https://github.com/sp1-patches/RustCrypto-hashes
 warning: Patch `ecdsa v0.16.8 (https://github.com/sp1-patches/signatures?branch=umadayal/secp256r1#49b62884)` was not used in the crate graph.
 Check that the patched package version and available features are compatible
 with the dependency requirements. If the patch has a different version from
 what is locked in the Cargo.lock file, run `cargo update` to use the new
 version. This may also occur with an optional dependency that is not enabled.
-    Blocking waiting for file lock on package cache
-    Blocking waiting for file lock on package cache
-    Blocking waiting for file lock on package cache
    Compiling sp1-sdk v3.0.0 (/Users/masatotsutsumi/zkvm-benchmarks/sp1/crates/sdk)
 warning: fibonacci-script@1.1.0: fibonacci-program built at 2024-12-12 15:16:57
    Compiling fibonacci-script v1.1.0 (/Users/masatotsutsumi/zkvm-benchmarks/sp1/examples/fibonacci/script)
-    Finished `release` profile [optimized] target(s) in 22.03s
+    Finished `release` profile [optimized] target(s) in 22.77s
      Running `/Users/masatotsutsumi/zkvm-benchmarks/sp1/examples/target/release/fibonacci-script`
 executed program with 13408 cycles
-n = 1000, prover time = 7.532161s
+opcode counts (13408 total instructions):
+    6406 add
+    1044 bne
+    1019 srl
+    1016 sub
+    1003 mul
+    1000 sra
+    1000 mulh
+     257 sw
+     126 lw
+      93 or
+      76 sll
+      76 lbu
+      59 and
+      51 jalr
+      43 bltu
+      31 sb
+      29 auipc
+      24 ecall
+      23 beq
+      16 jal
+       9 sltu
+       5 bgeu
+       2 xor
+syscall counts (24 total syscall instructions):
+    8 commit
+    8 commit_deferred_proofs
+    3 write
+    1 halt
+    1 hint_len
+    1 hint_read
+    1 sha_compress
+    1 sha_extend
+
+n = 1000, prover time = 7.83158125s
 generated proof
 a: 5965
 b: 3651
 successfully generated and verified proof for the program!
+	Command being timed: "cargo run --release"
+	User time (seconds): 87.04
+	System time (seconds): 4.06
+	Percent of CPU this job got: 261%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:34.89
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3586272
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 20
+	Minor (reclaiming a frame) page faults: 261946
+	Voluntary context switches: 14
+	Involuntary context switches: 102552
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0

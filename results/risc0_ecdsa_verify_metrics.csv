@@ -1,0 +1,2 @@
+name,size,speed,exec_duration,proof_duration,total_duration,verify_duration,total_cycles,user_cycles,output_bytes,proof_bytes,max_memory
+ecdsa_verify,1,0.14589821,63164083,6790929458,6854093541,12462000,524288,227299,408,222668,38961152

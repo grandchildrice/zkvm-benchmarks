@@ -1,19 +1,59 @@
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
    Compiling risc0-benchmark-methods v0.1.0 (/Users/masatotsutsumi/zkvm-benchmarks/risc0/benchmarks/methods)
    Compiling risc0-benchmark v0.1.0 (/Users/masatotsutsumi/zkvm-benchmarks/risc0/benchmarks)
-    Finished `release` profile [optimized + debuginfo] target(s) in 50.79s
+    Finished `release` profile [optimized + debuginfo] target(s) in 52.93s
      Running `target/release/risc0-benchmark fibonacci`
 Benchmarking fibonacci-10
- + 4.5/s
-Benchmarking fibonacci-50
- + 22.7/s
-Benchmarking fibonacci-90
- + 41.6/s
-┌──────────────┬──────┬────────┬───────────────┬────────────────┬────────────────┬─────────────────┬──────────────┬─────────────┬──────────────┬─────────────┐
-│ name         │ size │ speed  │ exec_duration │ proof_duration │ total_duration │ verify_duration │ total_cycles │ user_cycles │ output_bytes │ proof_bytes │
-├──────────────┼──────┼────────┼───────────────┼────────────────┼────────────────┼─────────────────┼──────────────┼─────────────┼──────────────┼─────────────┤
-│ fibonacci-10 │ 10   │ 4.5/s  │ 4.6ms         │ 2.23s          │ 2.24s          │ 12.7ms          │ 64K          │ 2.2K        │ 8B           │ 217.4KB     │
-├──────────────┼──────┼────────┼───────────────┼────────────────┼────────────────┼─────────────────┼──────────────┼─────────────┼──────────────┼─────────────┤
-│ fibonacci-50 │ 50   │ 22.7/s │ 3ms           │ 2.2s           │ 2.2s           │ 12.7ms          │ 64K          │ 2.3K        │ 8B           │ 217.4KB     │
-├──────────────┼──────┼────────┼───────────────┼────────────────┼────────────────┼─────────────────┼──────────────┼─────────────┼──────────────┼─────────────┤
-│ fibonacci-90 │ 90   │ 41.6/s │ 3ms           │ 2.16s          │ 2.16s          │ 12.5ms          │ 64K          │ 2.4K        │ 8B           │ 217.4KB     │
-└──────────────┴──────┴────────┴───────────────┴────────────────┴────────────────┴─────────────────┴──────────────┴─────────────┴──────────────┴─────────────┘
+ + 4.4/s
+Benchmarking fibonacci-100
+ + 46/s
+Benchmarking fibonacci-1000
+ + 362.5/s
+Benchmarking fibonacci-10000
+ + 845.2/s
+Benchmarking fibonacci-100000
+ + 1.4K/s
+Benchmarking fibonacci-1000000
+Context leak detected, msgtracer returned -1
+Context leak detected, msgtracer returned -1
+ + 1.4K/s
+┌───────────────────┬─────────┬─────────┬───────────────┬────────────────┬────────────────┬─────────────────┬──────────────┬─────────────┬──────────────┬─────────────┬────────────┐
+│ name              │ size    │ speed   │ exec_duration │ proof_duration │ total_duration │ verify_duration │ total_cycles │ user_cycles │ output_bytes │ proof_bytes │ max_memory │
+├───────────────────┼─────────┼─────────┼───────────────┼────────────────┼────────────────┼─────────────────┼──────────────┼─────────────┼──────────────┼─────────────┼────────────┤
+│ fibonacci-10      │ 10      │ 4.4/s   │ 5ms           │ 2.29s          │ 2.3s           │ 12.6ms          │ 64K          │ 2.5K        │ 8B           │ 217.4KB     │ 35.6MB     │
+├───────────────────┼─────────┼─────────┼───────────────┼────────────────┼────────────────┼─────────────────┼──────────────┼─────────────┼──────────────┼─────────────┼────────────┤
+│ fibonacci-100     │ 100     │ 46/s    │ 3.3ms         │ 2.17s          │ 2.17s          │ 12.5ms          │ 64K          │ 7.1K        │ 8B           │ 217.4KB     │ 514.4MB    │
+├───────────────────┼─────────┼─────────┼───────────────┼────────────────┼────────────────┼─────────────────┼──────────────┼─────────────┼──────────────┼─────────────┼────────────┤
+│ fibonacci-1000    │ 1000    │ 362.5/s │ 4.6ms         │ 2.75s          │ 2.76s          │ 12.8ms          │ 128K         │ 53.7K       │ 8B           │ 217.4KB     │ 639.1MB    │
+├───────────────────┼─────────┼─────────┼───────────────┼────────────────┼────────────────┼─────────────────┼──────────────┼─────────────┼──────────────┼─────────────┼────────────┤
+│ fibonacci-10000   │ 10000   │ 845.2/s │ 16ms          │ 11.82s         │ 11.83s         │ 12.8ms          │ 1M           │ 519.5K      │ 8B           │ 217.4KB     │ 758.9MB    │
+├───────────────────┼─────────┼─────────┼───────────────┼────────────────┼────────────────┼─────────────────┼──────────────┼─────────────┼──────────────┼─────────────┼────────────┤
+│ fibonacci-100000  │ 100000  │ 1.4K/s  │ 132.1ms       │ 1:11.6         │ 1:11.7         │ 12.5ms          │ 5.3M         │ 5.1M        │ 8B           │ 217.4KB     │ 2.15GB     │
+├───────────────────┼─────────┼─────────┼───────────────┼────────────────┼────────────────┼─────────────────┼──────────────┼─────────────┼──────────────┼─────────────┼────────────┤
+│ fibonacci-1000000 │ 1000000 │ 1.4K/s  │ 1.26s         │ 11:24.5        │ 11:25.7        │ 12.6ms          │ 52M          │ 50.5M       │ 8B           │ 217.4KB     │ 2.16GB     │
+└───────────────────┴─────────┴─────────┴───────────────┴────────────────┴────────────────┴─────────────────┴──────────────┴─────────────┴──────────────┴─────────────┴────────────┘
+	Command being timed: "cargo run --release -- fibonacci"
+	User time (seconds): 1035.53
+	System time (seconds): 67.75
+	Percent of CPU this job got: 132%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 13:50.53
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2366912
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 16
+	Minor (reclaiming a frame) page faults: 10701142
+	Voluntary context switches: 81
+	Involuntary context switches: 832061
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 1
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0
