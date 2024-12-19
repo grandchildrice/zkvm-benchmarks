@@ -10,6 +10,15 @@ sp1-fib:
 	gtime -v cargo run --release -- 100000 > ../../../../results/sp1_fibonacci_n100000.log 2>&1 && \
 	gtime -v cargo run --release -- 1000000 > ../../../../results/sp1_fibonacci_n1000000.log 2>&1
 
+sp1-matrix-ops:
+	cd sp1_main/examples/matrix-ops/program && cargo prove build && \
+	cd ../script && \
+	gtime -v cargo run --release -- 10 > ../../../../results/sp1_matrix-ops_n10.log 2>&1 && \
+	gtime -v cargo run --release -- 20 > ../../../../results/sp1_matrix-ops_n20.log 2>&1 && \
+	gtime -v cargo run --release -- 30 > ../../../../results/sp1_matrix-ops_n30.log 2>&1 && \
+	gtime -v cargo run --release -- 40 > ../../../../results/sp1_matrix-ops_n40.log 2>&1 && \
+	gtime -v cargo run --release -- 50 > ../../../../results/sp1_matrix-ops_n50.log 2>&1
+
 risc0-fib:
 	cd risc0/benchmarks && gtime -v cargo run --release -- fibonacci > ../../results/risc0_fibonacci.log 2>&1 && \
 	mv metrics.csv ../../results/risc0_fibonacci_metrics.csv
