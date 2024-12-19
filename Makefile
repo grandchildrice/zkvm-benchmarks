@@ -32,7 +32,23 @@ risc0-matrix-ops:
 	mv metrics.csv ../../results/risc0_matrix_ops_metrics.csv
 
 jolt-fib:
-	cd jolt && cargo run -p jolt-core --release -- trace --name fibonacci --format chrome --pcs hyper-kzg > ../results/jolt_fibonacci.log 2>&1 && \
+	cd jolt && \
+	gtime -v cargo run --release -p fibonacci -- 10 > ../results/jolt_fibonacci_n10.log 2>&1 && \
+	gtime -v cargo run --release -p fibonacci -- 100 > ../results/jolt_fibonacci_n100.log 2>&1 && \
+	gtime -v cargo run --release -p fibonacci -- 1000 > ../results/jolt_fibonacci_n1000.log 2>&1 && \
+	gtime -v cargo run --release -p fibonacci -- 10000 > ../results/jolt_fibonacci_n10000.log 2>&1 && \
+	gtime -v cargo run --release -p fibonacci -- 100000 > ../results/jolt_fibonacci_n100000.log 2>&1
+
+jolt-matrix-ops:
+	cd jolt && \
+	gtime -v cargo run --release -p matrix-ops -- 10 > ../results/jolt_matrix_ops_n10.log 2>&1 && \
+	gtime -v cargo run --release -p matrix-ops -- 20 > ../results/jolt_matrix_ops_n20.log 2>&1 && \
+	gtime -v cargo run --release -p matrix-ops -- 30 > ../results/jolt_matrix_ops_n30.log 2>&1 && \
+	gtime -v cargo run --release -p matrix-ops -- 40 > ../results/jolt_matrix_ops_n40.log 2>&1 && \
+	gtime -v cargo run --release -p matrix-ops -- 50 > ../results/jolt_matrix_ops_n50.log 2>&1
+
+jolt-profile:
+	cd jolt && cargo run -p jolt-core --release -- trace --name fibonacci --format chrome --pcs hyper-kzg > ../results/jolt_profile.log 2>&1 && \
 	mv trace-*.json ../results/trace-fibonacci.json
 
 nexus-fib:
