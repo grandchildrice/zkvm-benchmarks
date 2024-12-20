@@ -52,7 +52,13 @@ jolt-profile:
 	mv trace-*.json ../results/trace-fibonacci.json
 
 nexus-fib:
-	cd nexus/examples && RUST_LOG=debug cargo run -r --bin fib3 > ../../results/nexus_fibonacci.log 2>&1
+	cd nexus/examples && \
+	gtime -v cargo nexus prove --bin fib10 > ../../results/nexus_fibonacci_n10.log 2>&1 && \
+	gtime -v cargo nexus prove --bin fib100 > ../../results/nexus_fibonacci_n100.log 2>&1 && \
+	gtime -v cargo nexus prove --bin fib1000 > ../../results/nexus_fibonacci_n1000.log 2>&1 && \
+	gtime -v cargo nexus prove --bin fib10000 > ../../results/nexus_fibonacci_n10000.log 2>&1 && \
+	gtime -v cargo nexus prove --bin fib100000 > ../../results/nexus_fibonacci_n100000.log 2>&1 && \
+	gtime -v cargo nexus prove --bin fib1000000 > ../../results/nexus_fibonacci_n1000000.log 2>&1 && 
 
 ceno-fib:
 	cd ceno/ceno_zkvm && gtime -v cargo bench fibonacci > ../../results/ceno_fibonacci.log 2>&1
