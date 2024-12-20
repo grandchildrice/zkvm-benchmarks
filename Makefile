@@ -60,6 +60,14 @@ nexus-fib:
 	gtime -v cargo nexus prove --bin fib100000 > ../../results/nexus_fibonacci_n100000.log 2>&1 && \
 	gtime -v cargo nexus prove --bin fib1000000 > ../../results/nexus_fibonacci_n1000000.log 2>&1 && 
 
+nexus-matrix-ops:
+	cd nexus/examples && \
+	gtime -v cargo nexus prove --bin matrix_ops10 > ../../results/nexus_matrix_ops_n10.log 2>&1 && \
+	gtime -v cargo nexus prove --bin matrix_ops20 > ../../results/nexus_matrix_ops_n20.log 2>&1 && \
+	gtime -v cargo nexus prove --bin matrix_ops30 > ../../results/nexus_matrix_ops_n30n.log 2>&1 && \
+	gtime -v cargo nexus prove --bin matrix_ops40 > ../../results/nexus_matrix_ops_n40.log 2>&1 && \
+	gtime -v cargo nexus prove --bin matrix_ops50 > ../../results/nexus_matrix_ops_n50.log 2>&1
+
 ceno-fib:
 	cd ceno/ceno_zkvm && gtime -v cargo bench fibonacci > ../../results/ceno_fibonacci.log 2>&1
 
