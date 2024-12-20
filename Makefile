@@ -28,7 +28,7 @@ risc0-sha2:
 	mv metrics.csv ../../results/risc0_ecdsa_verify_metrics.csv
 
 risc0-matrix-ops:
-	cd risc0/benchmarks && gtime -v cargo run --release -- fibonacci > ../../results/risc0_matrix_ops.log 2>&1 && \
+	cd risc0/benchmarks && gtime -v cargo run --release -- iter-blake2b > ../../results/risc0_matrix_ops.log 2>&1 && \
 	mv metrics.csv ../../results/risc0_matrix_ops_metrics.csv
 
 jolt-fib:
