@@ -1,0 +1,30 @@
+    Finished `release` profile [optimized + debuginfo] target(s) in 0.18s
+     Running `target/release/matrix-ops 30`
+trace len: 5166906
+Trace length: 5166906
+n = 30, proof generation took: 172.968573041s
+output: 0
+valid: false
+	Command being timed: "cargo run --release -p matrix-ops -- 30"
+	User time (seconds): 1043.65
+	System time (seconds): 331.93
+	Percent of CPU this job got: 719%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:11.15
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 47841872
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 56043510
+	Voluntary context switches: 20398
+	Involuntary context switches: 7222659
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 2
+	Page size (bytes): 16384
+	Exit status: 0

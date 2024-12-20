@@ -1,24 +1,25 @@
-    Finished `release` profile [optimized] target(s) in 0.08s
+   Compiling example v0.2.4 (/Users/masatotsutsumi/zkvm-benchmarks/nexus/examples)
+    Finished `release` profile [optimized] target(s) in 1.02s
 	Command being timed: "cargo nexus prove --bin fib10"
-	User time (seconds): 14.66
-	System time (seconds): 0.91
-	Percent of CPU this job got: 197%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:07.89
+	User time (seconds): 15.22
+	System time (seconds): 1.14
+	Percent of CPU this job got: 178%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:09.19
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 1550048
+	Maximum resident set size (kbytes): 1544752
 	Average resident set size (kbytes): 0
-	Major (requiring I/O) page faults: 13
-	Minor (reclaiming a frame) page faults: 188447
-	Voluntary context switches: 152
-	Involuntary context switches: 17442
+	Major (requiring I/O) page faults: 1591
+	Minor (reclaiming a frame) page faults: 240841
+	Voluntary context switches: 3284
+	Involuntary context switches: 24444
 	Swaps: 0
 	File system inputs: 0
 	File system outputs: 0
 	Socket messages sent: 0
 	Socket messages received: 0
-	Signals delivered: 1
+	Signals delivered: 5
 	Page size (bytes): 16384
 	Exit status: 0
