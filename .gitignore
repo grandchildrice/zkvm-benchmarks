@@ -29,4 +29,5 @@ Cargo.lock
 # Other
 node_modules/
 npm-debug.log
-
+venv/
+.ipynb_checkpoints/
