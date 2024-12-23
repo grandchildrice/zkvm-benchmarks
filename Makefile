@@ -8,7 +8,11 @@ sp1-fib:
 	gtime -v cargo run --release -- 1000 > ../../../../results/sp1_fibonacci_n1000.log 2>&1 && \
 	gtime -v cargo run --release -- 10000 > ../../../../results/sp1_fibonacci_n10000.log 2>&1 && \
 	gtime -v cargo run --release -- 100000 > ../../../../results/sp1_fibonacci_n100000.log 2>&1 && \
-	gtime -v cargo run --release -- 1000000 > ../../../../results/sp1_fibonacci_n1000000.log 2>&1
+	gtime -v cargo run --release -- 1000000 > ../../../../results/sp1_fibonacci_n1000000.log 2>&1 && \
+	gtime -v cargo run --release -- 2000000 > ../../../../results/sp1_fibonacci_n2000000.log 2>&1 && \
+	gtime -v cargo run --release -- 3000000 > ../../../../results/sp1_fibonacci_n3000000.log 2>&1 && \
+	gtime -v cargo run --release -- 4000000 > ../../../../results/sp1_fibonacci_n4000000.log 2>&1 && \
+	gtime -v cargo run --release -- 5000000 > ../../../../results/sp1_fibonacci_n5000000.log 2>&1
 
 sp1-matrix-ops:
 	cd sp1_main/examples/matrix-ops/program && cargo prove build && \
@@ -37,7 +41,11 @@ jolt-fib:
 	gtime -v cargo run --release -p fibonacci -- 100 > ../results/jolt_fibonacci_n100.log 2>&1 && \
 	gtime -v cargo run --release -p fibonacci -- 1000 > ../results/jolt_fibonacci_n1000.log 2>&1 && \
 	gtime -v cargo run --release -p fibonacci -- 10000 > ../results/jolt_fibonacci_n10000.log 2>&1 && \
-	gtime -v cargo run --release -p fibonacci -- 100000 > ../results/jolt_fibonacci_n100000.log 2>&1
+	gtime -v cargo run --release -p fibonacci -- 100000 > ../results/jolt_fibonacci_n100000.log 2>&1 && \
+	gtime -v cargo run --release -p fibonacci -- 110000 > ../results/jolt_fibonacci_n110000.log 2>&1 && \
+	gtime -v cargo run --release -p fibonacci -- 120000 > ../results/jolt_fibonacci_n120000.log 2>&1 && \
+	gtime -v cargo run --release -p fibonacci -- 130000 > ../results/jolt_fibonacci_n130000.log 2>&1 && \
+	gtime -v cargo run --release -p fibonacci -- 140000 > ../results/jolt_fibonacci_n140000.log 2>&1
 
 jolt-matrix-ops:
 	cd jolt && \

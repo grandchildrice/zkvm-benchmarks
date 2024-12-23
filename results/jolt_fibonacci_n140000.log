@@ -1,0 +1,30 @@
+    Finished `release` profile [optimized + debuginfo] target(s) in 0.51s
+     Running `target/release/fibonacci 140000`
+trace len: 8540177
+Trace length: 8540177
+n = 140000, proof generation took: 552.476981208s
+output: 7877
+valid: false
+	Command being timed: "cargo run --release -p fibonacci -- 140000"
+	User time (seconds): 1791.87
+	System time (seconds): 879.07
+	Percent of CPU this job got: 466%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 9:32.29
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 52528816
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1129
+	Minor (reclaiming a frame) page faults: 150856110
+	Voluntary context switches: 2893386
+	Involuntary context switches: 23442216
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 2
+	Page size (bytes): 16384
+	Exit status: 0

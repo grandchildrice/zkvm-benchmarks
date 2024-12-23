@@ -1,0 +1,135 @@
+warning: Patch `sha2 v0.10.6 (https://github.com/sp1-patches/RustCrypto-hashes?tag=sha2-v0.10.6-patch-v1#e5f8b7ea)` was not used in the crate graph.
+Perhaps you misspelled the source URL being patched.
+Possible URLs for `[patch.<URL>]`:
+    https://github.com/sp1-patches/RustCrypto-hashes
+    https://github.com/sp1-patches/RustCrypto-hashes
+    https://github.com/sp1-patches/RustCrypto-hashes.git
+warning: Patch `sha2 v0.9.8 (https://github.com/sp1-patches/RustCrypto-hashes?tag=sha2-v0.9.8-patch-v1#afdbfb09)` was not used in the crate graph.
+Perhaps you misspelled the source URL being patched.
+Possible URLs for `[patch.<URL>]`:
+    https://github.com/sp1-patches/RustCrypto-hashes
+    https://github.com/sp1-patches/RustCrypto-hashes
+    https://github.com/sp1-patches/RustCrypto-hashes.git
+warning: Patch `bls12_381 v0.8.0 (https://github.com/sp1-patches/bls12_381?tag=bls12_381-v0.8.0-patch-v1#444e1092)` was not used in the crate graph.
+Patch `ecdsa v0.16.8 (https://github.com/sp1-patches/signatures?branch=umadayal/secp256r1#49b62884)` was not used in the crate graph.
+Check that the patched package version and available features are compatible
+with the dependency requirements. If the patch has a different version from
+what is locked in the Cargo.lock file, run `cargo update` to use the new
+version. This may also occur with an optional dependency that is not enabled.
+warning: use of deprecated function `hook::hook_ecrecover`: Use `hook_ecrecover_v2` instead.
+  --> /Users/masatotsutsumi/zkvm-benchmarks/sp1_main/crates/core/executor/src/hook.rs:86:41
+   |
+86 |             (FD_ECRECOVER_HOOK, hookify(hook_ecrecover)),
+   |                                         ^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(deprecated)]` on by default
+
+warning: `sp1-core-executor` (lib) generated 1 warning
+warning: fibonacci-script@1.1.0: fibonacci-program built at 2024-12-23 10:49:57
+    Finished `release` profile [optimized] target(s) in 1.13s
+     Running `/Users/masatotsutsumi/zkvm-benchmarks/sp1_main/examples/target/release/fibonacci-script 4000000`
+executed program with 48001408 cycles
+opcode counts (48001408 total instructions):
+  24000406 add
+   4000044 bne
+   4000019 srl
+   4000016 sub
+   4000003 mul
+   4000000 sra
+   4000000 mulh
+       257 sw
+       126 lw
+        93 or
+        76 sll
+        76 lbu
+        59 and
+        51 jalr
+        43 bltu
+        31 sb
+        29 auipc
+        24 ecall
+        23 beq
+        16 jal
+         9 sltu
+         5 bgeu
+         2 xor
+         0 slt
+         0 lb
+         0 lh
+         0 lhu
+         0 sh
+         0 blt
+         0 bge
+         0 ebreak
+         0 mulhu
+         0 mulhsu
+         0 div
+         0 divu
+         0 rem
+         0 remu
+         0 unimp
+syscall counts (24 total syscall instructions):
+  8 commit
+  8 commit_deferred_proofs
+  3 write
+  1 halt
+  1 hint_len
+  1 hint_read
+  1 sha_compress
+  1 sha_extend
+  0 enter_unconstrained
+  0 exit_unconstrained
+  0 verify_sp1_proof
+  0 ed_decompress
+  0 secp256k1_double
+  0 secp256k1_decompress
+  0 bn254_double
+  0 bls12381_decompress
+  0 bls12381_double
+  0 ed_add
+  0 keccak_permute
+  0 secp256k1_add
+  0 bn254_add
+  0 uint256_mul
+  0 bls12381_add
+  0 bls12381_fp_add
+  0 bls12381_fp_sub
+  0 bls12381_fp_mul
+  0 bls12381_fp2_add
+  0 bls12381_fp2_sub
+  0 bls12381_fp2_mul
+  0 bn254_fp_add
+  0 bn254_fp_sub
+  0 bn254_fp_mul
+  0 bn254_fp2_add
+  0 bn254_fp2_sub
+  0 bn254_fp2_mul
+
+n = 4000000, proof generation took: 3018.058528708s
+generated proof
+a: 6353
+b: 5091
+successfully generated and verified proof for the program!
+	Command being timed: "cargo run --release -- 4000000"
+	User time (seconds): 33312.20
+	System time (seconds): 736.93
+	Percent of CPU this job got: 1126%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 50:22.98
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 34852688
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1539
+	Minor (reclaiming a frame) page faults: 57718339
+	Voluntary context switches: 17
+	Involuntary context switches: 17717506
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0
