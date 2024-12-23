@@ -26,49 +26,48 @@ warning: use of deprecated function `hook::hook_ecrecover`: Use `hook_ecrecover_
 
 warning: `sp1-core-executor` (lib) generated 1 warning
 warning: matrix-ops-script@1.1.0: matrix-ops-program built at 2024-12-19 20:22:41
-   Compiling matrix-ops-script v1.1.0 (/Users/masatotsutsumi/zkvm-benchmarks/sp1_main/examples/matrix-ops/script)
-    Finished `release` profile [optimized] target(s) in 1.97s
-     Running `/Users/masatotsutsumi/zkvm-benchmarks/sp1_main/examples/target/release/matrix-ops-script 10`
-executed program with 163620 cycles
-opcode counts (163620 total instructions):
-  52868 add
-  18772 lw
-  11510 and
-  11118 sll
-  10150 sw
-   8646 or
-   7883 srl
-   6542 jalr
-   6063 bgeu
-   5745 bltu
-   4526 bne
-   4275 auipc
-   2787 blt
-   2700 beq
-   2528 bge
-   2082 xor
-   1681 sub
-   1131 jal
-   1027 mul
-    810 mulhu
-    604 sltu
-    108 lbu
-     39 sb
-     23 ecall
-      2 slt
-      0 sra
-      0 lb
-      0 lh
-      0 lhu
-      0 sh
-      0 ebreak
-      0 mulh
-      0 mulhsu
-      0 div
-      0 divu
-      0 rem
-      0 remu
-      0 unimp
+    Finished `release` profile [optimized] target(s) in 1.08s
+     Running `/Users/masatotsutsumi/zkvm-benchmarks/sp1_main/examples/target/release/matrix-ops-script 50`
+executed program with 20096457 cycles
+opcode counts (20096457 total instructions):
+  6412406 add
+  2263092 lw
+  1574588 sll
+  1398848 and
+  1178538 or
+  1143430 sw
+   865015 srl
+   760462 jalr
+   751221 bgeu
+   741000 bltu
+   510486 bne
+   505235 auipc
+   419103 blt
+   411452 bge
+   265380 beq
+   252402 xor
+   242197 sub
+   125107 mul
+   120050 mulhu
+   113922 sltu
+    42231 jal
+      228 lbu
+       39 sb
+       23 ecall
+        2 slt
+        0 sra
+        0 lb
+        0 lh
+        0 lhu
+        0 sh
+        0 ebreak
+        0 mulh
+        0 mulhsu
+        0 div
+        0 divu
+        0 rem
+        0 remu
+        0 unimp
 syscall counts (23 total syscall instructions):
   8 commit
   8 commit_deferred_proofs
@@ -106,26 +105,26 @@ syscall counts (23 total syscall instructions):
   0 bn254_fp2_sub
   0 bn254_fp2_mul
 
-n = 10, proof generation took: 68.9294805s
+n = 50, proof generation took: 1287.459416208s
 generated proof
 a: 0
 b: 0
 successfully generated and verified proof for the program!
-	Command being timed: "cargo run --release -- 10"
-	User time (seconds): 667.40
-	System time (seconds): 17.18
-	Percent of CPU this job got: 932%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:13.43
+	Command being timed: "cargo run --release -- 50"
+	User time (seconds): 14358.69
+	System time (seconds): 244.12
+	Percent of CPU this job got: 1130%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 21:31.75
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 10071904
+	Maximum resident set size (kbytes): 34788256
 	Average resident set size (kbytes): 0
-	Major (requiring I/O) page faults: 160
-	Minor (reclaiming a frame) page faults: 1959737
-	Voluntary context switches: 7
-	Involuntary context switches: 718967
+	Major (requiring I/O) page faults: 1541
+	Minor (reclaiming a frame) page faults: 24045404
+	Voluntary context switches: 13
+	Involuntary context switches: 6831256
 	Swaps: 0
 	File system inputs: 0
 	File system outputs: 0

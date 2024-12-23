@@ -1,218 +1,155 @@
-   Compiling libc v0.2.168
-   Compiling serde v1.0.216
-   Compiling crossbeam-utils v0.8.21
-   Compiling once_cell v1.20.2
-   Compiling regex-syntax v0.8.5
-   Compiling serde_derive v1.0.216
-   Compiling equivalent v1.0.1
-   Compiling hashbrown v0.15.2
-   Compiling winnow v0.5.40
-   Compiling rustix v0.38.42
-   Compiling toml_datetime v0.6.8
-   Compiling fastrand v2.3.0
-   Compiling downcast-rs v1.2.1
-   Compiling cc v1.2.4
+   Compiling ceno-examples v0.1.0 (/Users/masatotsutsumi/zkvm-benchmarks/ceno/examples-builder)
    Compiling ceno_zkvm v0.1.0 (/Users/masatotsutsumi/zkvm-benchmarks/ceno/ceno_zkvm)
-   Compiling thiserror v2.0.8
-   Compiling indexmap v2.7.0
-   Compiling miniz_oxide v0.8.2
-   Compiling thiserror-impl v2.0.8
-   Compiling bit-vec v0.8.0
-   Compiling fnv v1.0.7
-   Compiling quick-error v1.2.3
-   Compiling unarray v0.1.4
-   Compiling bit-set v0.8.0
-   Compiling findshlibs v0.10.2
-   Compiling toml_edit v0.19.15
-   Compiling crossbeam-epoch v0.9.18
-   Compiling crossbeam-channel v0.5.14
-   Compiling crossbeam-deque v0.8.6
-   Compiling regex-automata v0.4.9
-   Compiling rayon-core v1.12.1
-   Compiling getrandom v0.2.15
-   Compiling const-random-macro v0.1.16
-   Compiling rayon v1.10.0
-   Compiling const-random v0.1.18
-   Compiling proc-macro-crate v1.3.1
-   Compiling is-terminal v0.4.13
-   Compiling errno v0.3.10
-   Compiling dirs-sys-next v0.1.2
-   Compiling cpufeatures v0.2.16
-   Compiling memmap2 v0.9.5
-   Compiling wait-timeout v0.2.0
-   Compiling dirs-next v2.0.0
-   Compiling rand_core v0.6.4
-   Compiling parking_lot_core v0.9.10
-   Compiling nix v0.27.1
-   Compiling num_enum_derive v0.5.11
-   Compiling term v0.7.0
-   Compiling ff v0.13.0
-   Compiling symbolic-common v12.12.3
-   Compiling parking_lot v0.12.3
-   Compiling regex v1.11.1
-   Compiling group v0.13.0
-   Compiling ahash v0.8.11
-   Compiling symbolic-demangle v12.12.3
-   Compiling tracing-subscriber v0.3.19
-   Compiling inferno v0.12.0
-   Compiling tempfile v3.14.0
-   Compiling rand_xorshift v0.3.0
-   Compiling num_enum v0.5.11
-   Compiling rusty-fork v0.3.0
-   Compiling backtrace v0.3.74
-   Compiling rrs-succinct v0.1.0
-   Compiling plonky2_maybe_rayon v0.2.0
-   Compiling pprof2 v0.13.1
-   Compiling ceno_emul v0.1.0 (/Users/masatotsutsumi/zkvm-benchmarks/ceno/ceno_emul)
-   Compiling tracing-forest v0.1.6
-   Compiling rand_chacha v0.3.1
-   Compiling serde_json v1.0.133
-   Compiling ciborium v0.2.2
-   Compiling generic-array v0.14.7
-   Compiling hashbrown v0.14.5
-   Compiling csv v1.3.1
-   Compiling bincode v1.3.3
-   Compiling rand v0.8.5
-   Compiling prettytable-rs v0.10.0
-   Compiling inout v0.1.3
-   Compiling crypto-common v0.1.6
-   Compiling cipher v0.4.4
-   Compiling tinytemplate v1.2.1
-   Compiling num-bigint v0.4.6
-   Compiling pasta_curves v0.5.1
-   Compiling num-complex v0.4.6
-   Compiling ark-std v0.4.0
-   Compiling aes v0.8.4
-   Compiling ctr v0.9.2
-   Compiling proptest v1.6.0
-   Compiling criterion v0.5.1
-   Compiling halo2curves v0.1.0
-   Compiling num-rational v0.4.2
-   Compiling num v0.4.3
-   Compiling plonky2_field v0.2.2
-   Compiling plonky2 v0.2.2
-   Compiling goldilocks v0.1.0 (https://github.com/scroll-tech/ceno-Goldilocks#29a15d18)
-   Compiling poseidon v0.1.0 (/Users/masatotsutsumi/zkvm-benchmarks/ceno/poseidon)
-   Compiling ff_ext v0.1.0 (/Users/masatotsutsumi/zkvm-benchmarks/ceno/ff_ext)
-   Compiling transcript v0.1.0 (/Users/masatotsutsumi/zkvm-benchmarks/ceno/transcript)
-   Compiling multilinear_extensions v0.1.0 (/Users/masatotsutsumi/zkvm-benchmarks/ceno/multilinear_extensions)
-   Compiling sumcheck v0.1.0 (/Users/masatotsutsumi/zkvm-benchmarks/ceno/sumcheck)
-   Compiling mpcs v0.1.0 (/Users/masatotsutsumi/zkvm-benchmarks/ceno/mpcs)
-    Finished `bench` profile [optimized] target(s) in 59.43s
-     Running unittests src/lib.rs (/Users/masatotsutsumi/zkvm-benchmarks/ceno/target/release/deps/ceno_zkvm-f775c4523f3f49f3)
-
-running 0 tests
-
-test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 114 filtered out; finished in 0.00s
-
-     Running unittests src/bin/e2e.rs (/Users/masatotsutsumi/zkvm-benchmarks/ceno/target/release/deps/e2e-fbf86be58e667d26)
-
-running 0 tests
-
-test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
-     Running unittests src/bin/riscv_stats.rs (/Users/masatotsutsumi/zkvm-benchmarks/ceno/target/release/deps/riscv_stats-6558f9e55559d055)
-
-running 0 tests
-
-test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
-     Running benches/fibonacci.rs (/Users/masatotsutsumi/zkvm-benchmarks/ceno/target/release/deps/fibonacci-cf2d79820f61b2a1)
+    Finished `bench` profile [optimized] target(s) in 25.10s
+     Running benches/fibonacci.rs (/Users/masatotsutsumi/zkvm-benchmarks/ceno/target/release/deps/fibonacci-c996ff9d188bceb2)
 Gnuplot not found, using plotters backend
 
-max_steps = 1048576, proof size = 21421333, hashes count = 43518
-Benchmarking fibonacci_max_steps_1048576/prove_fibonacci/fibonacci_max_steps_1048576
-Benchmarking fibonacci_max_steps_1048576/prove_fibonacci/fibonacci_max_steps_1048576: Warming up for 20.000 s
-Fibonacci::create_proof, max_steps = 1048576, time = 5.651403375, peak_memory = 4124065792
-Fibonacci::create_proof, max_steps = 1048576, time = 5.755389125, peak_memory = 4251910144
-Fibonacci::create_proof, max_steps = 1048576, time = 5.7563465, peak_memory = 4251910144
+max_steps = 2500, proof size = 14402053, hashes count = 31260
+Benchmarking fibonacci_max_steps_2500/prove_fibonacci/fibonacci_max_steps_2500
+Benchmarking fibonacci_max_steps_2500/prove_fibonacci/fibonacci_max_steps_2500: Warming up for 20.000 s
+Fibonacci::create_proof, max_steps = 2500, time = 1.398606167, peak_memory = 2374893568
+Fibonacci::create_proof, max_steps = 2500, time = 1.374451334, peak_memory = 2449342464
+Fibonacci::create_proof, max_steps = 2500, time = 1.391064833, peak_memory = 2474573824
 
-Warning: Unable to complete 10 samples in 5.0s. You may wish to increase target time to 126.4s.
-Benchmarking fibonacci_max_steps_1048576/prove_fibonacci/fibonacci_max_steps_1048576: Collecting 10 samples in estimated 126.37 s (10 iterations)
-Fibonacci::create_proof, max_steps = 1048576, time = 5.764225625, peak_memory = 4251910144
-Fibonacci::create_proof, max_steps = 1048576, time = 10.671559958, peak_memory = 4301848576
-Fibonacci::create_proof, max_steps = 1048576, time = 5.641058625, peak_memory = 4305125376
-Fibonacci::create_proof, max_steps = 1048576, time = 5.749151458, peak_memory = 4305125376
-Fibonacci::create_proof, max_steps = 1048576, time = 5.877956333, peak_memory = 4534648832
-Fibonacci::create_proof, max_steps = 1048576, time = 6.960698709, peak_memory = 4534845440
-Fibonacci::create_proof, max_steps = 1048576, time = 5.664523833, peak_memory = 4723081216
-Fibonacci::create_proof, max_steps = 1048576, time = 5.782209583, peak_memory = 4723081216
-Fibonacci::create_proof, max_steps = 1048576, time = 5.617717292, peak_memory = 4829216768
-Fibonacci::create_proof, max_steps = 1048576, time = 5.633340167, peak_memory = 4829216768
-Benchmarking fibonacci_max_steps_1048576/prove_fibonacci/fibonacci_max_steps_1048576: Analyzing
-fibonacci_max_steps_1048576/prove_fibonacci/fibonacci_max_steps_1048576
-                        time:   [5.6960 s 6.3362 s 7.3498 s]
-                        change: [-2.3669% +8.5421% +27.805%] (p = 0.42 > 0.05)
-                        No change in performance detected.
+Warning: Unable to complete 10 samples in 5.0s. You may wish to increase target time to 79.0s.
+Benchmarking fibonacci_max_steps_2500/prove_fibonacci/fibonacci_max_steps_2500: Collecting 10 samples in estimated 78.962 s (10 iterations)
+Fibonacci::create_proof, max_steps = 2500, time = 1.421155792, peak_memory = 2516910080
+Fibonacci::create_proof, max_steps = 2500, time = 1.44034025, peak_memory = 2564489216
+Fibonacci::create_proof, max_steps = 2500, time = 1.472373417, peak_memory = 2595471360
+Fibonacci::create_proof, max_steps = 2500, time = 1.418970208, peak_memory = 2612150272
+Fibonacci::create_proof, max_steps = 2500, time = 1.375842042, peak_memory = 2621259776
+Fibonacci::create_proof, max_steps = 2500, time = 1.378428667, peak_memory = 2648817664
+Fibonacci::create_proof, max_steps = 2500, time = 1.394182584, peak_memory = 2673098752
+Fibonacci::create_proof, max_steps = 2500, time = 1.388986208, peak_memory = 2673098752
+Fibonacci::create_proof, max_steps = 2500, time = 1.383286833, peak_memory = 2673246208
+Fibonacci::create_proof, max_steps = 2500, time = 1.382674333, peak_memory = 2681716736
+Benchmarking fibonacci_max_steps_2500/prove_fibonacci/fibonacci_max_steps_2500: Analyzing
+fibonacci_max_steps_2500/prove_fibonacci/fibonacci_max_steps_2500
+                        time:   [1.3886 s 1.4056 s 1.4255 s]
+
+
+max_steps = 7100, proof size = 15510861, hashes count = 33321
+Benchmarking fibonacci_max_steps_7100/prove_fibonacci/fibonacci_max_steps_7100
+Benchmarking fibonacci_max_steps_7100/prove_fibonacci/fibonacci_max_steps_7100: Warming up for 20.000 s
+Fibonacci::create_proof, max_steps = 7100, time = 1.441103209, peak_memory = 2740846592
+Fibonacci::create_proof, max_steps = 7100, time = 1.447529375, peak_memory = 2758852608
+Fibonacci::create_proof, max_steps = 7100, time = 1.43074375, peak_memory = 2759032832
+
+Warning: Unable to complete 10 samples in 5.0s. You may wish to increase target time to 80.8s.
+Benchmarking fibonacci_max_steps_7100/prove_fibonacci/fibonacci_max_steps_7100: Collecting 10 samples in estimated 80.843 s (10 iterations)
+Fibonacci::create_proof, max_steps = 7100, time = 1.439638917, peak_memory = 2760818688
+Fibonacci::create_proof, max_steps = 7100, time = 1.451294708, peak_memory = 2760933376
+Fibonacci::create_proof, max_steps = 7100, time = 1.463567792, peak_memory = 2760949760
+Fibonacci::create_proof, max_steps = 7100, time = 1.423492917, peak_memory = 2761097216
+Fibonacci::create_proof, max_steps = 7100, time = 1.449779042, peak_memory = 2769600512
+Fibonacci::create_proof, max_steps = 7100, time = 1.454161917, peak_memory = 2785984512
+Fibonacci::create_proof, max_steps = 7100, time = 1.449481583, peak_memory = 2785984512
+Fibonacci::create_proof, max_steps = 7100, time = 1.450945667, peak_memory = 2785984512
+Fibonacci::create_proof, max_steps = 7100, time = 1.447852917, peak_memory = 2785984512
+Fibonacci::create_proof, max_steps = 7100, time = 1.437521792, peak_memory = 2794668032
+Benchmarking fibonacci_max_steps_7100/prove_fibonacci/fibonacci_max_steps_7100: Analyzing
+fibonacci_max_steps_7100/prove_fibonacci/fibonacci_max_steps_7100
+                        time:   [1.4400 s 1.4468 s 1.4528 s]
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) low mild
+
+
+max_steps = 53700, proof size = 17675877, hashes count = 37164
+Benchmarking fibonacci_max_steps_53700/prove_fibonacci/fibonacci_max_steps_53700
+Benchmarking fibonacci_max_steps_53700/prove_fibonacci/fibonacci_max_steps_53700: Warming up for 20.000 s
+Fibonacci::create_proof, max_steps = 53700, time = 1.6864893749999998, peak_memory = 2809069568
+Fibonacci::create_proof, max_steps = 53700, time = 1.706690959, peak_memory = 2809069568
+Fibonacci::create_proof, max_steps = 53700, time = 1.711335458, peak_memory = 2809069568
+
+Warning: Unable to complete 10 samples in 5.0s. You may wish to increase target time to 79.8s.
+Benchmarking fibonacci_max_steps_53700/prove_fibonacci/fibonacci_max_steps_53700: Collecting 10 samples in estimated 79.786 s (10 iterations)
+Fibonacci::create_proof, max_steps = 53700, time = 1.6737522500000002, peak_memory = 2809069568
+Fibonacci::create_proof, max_steps = 53700, time = 1.7164371250000001, peak_memory = 2817458176
+Fibonacci::create_proof, max_steps = 53700, time = 1.7063535, peak_memory = 2817458176
+Fibonacci::create_proof, max_steps = 53700, time = 1.724540791, peak_memory = 2817458176
+Fibonacci::create_proof, max_steps = 53700, time = 1.6819934170000002, peak_memory = 2818506752
+Fibonacci::create_proof, max_steps = 53700, time = 1.683054834, peak_memory = 2851045376
+Fibonacci::create_proof, max_steps = 53700, time = 1.6876995, peak_memory = 2851045376
+Fibonacci::create_proof, max_steps = 53700, time = 1.695848916, peak_memory = 2851045376
+Fibonacci::create_proof, max_steps = 53700, time = 1.696087541, peak_memory = 2851307520
+Fibonacci::create_proof, max_steps = 53700, time = 1.6920518329999998, peak_memory = 2851356672
+Benchmarking fibonacci_max_steps_53700/prove_fibonacci/fibonacci_max_steps_53700: Analyzing
+fibonacci_max_steps_53700/prove_fibonacci/fibonacci_max_steps_53700
+                        time:   [1.6868 s 1.6958 s 1.7055 s]
+
+
+max_steps = 519500, proof size = 20434309, hashes count = 41868
+Benchmarking fibonacci_max_steps_519500/prove_fibonacci/fibonacci_max_steps_519500
+Benchmarking fibonacci_max_steps_519500/prove_fibonacci/fibonacci_max_steps_519500: Warming up for 20.000 s
+Fibonacci::create_proof, max_steps = 519500, time = 3.53283875, peak_memory = 3355099136
+Fibonacci::create_proof, max_steps = 519500, time = 3.517564959, peak_memory = 3889332224
+Fibonacci::create_proof, max_steps = 519500, time = 3.550590417, peak_memory = 4043571200
+
+Warning: Unable to complete 10 samples in 5.0s. You may wish to increase target time to 99.1s.
+Benchmarking fibonacci_max_steps_519500/prove_fibonacci/fibonacci_max_steps_519500: Collecting 10 samples in estimated 99.149 s (10 iterations)
+Fibonacci::create_proof, max_steps = 519500, time = 3.524261542, peak_memory = 4043571200
+Fibonacci::create_proof, max_steps = 519500, time = 3.551678209, peak_memory = 4043571200
+Fibonacci::create_proof, max_steps = 519500, time = 3.567683542, peak_memory = 4043571200
+Fibonacci::create_proof, max_steps = 519500, time = 3.531377709, peak_memory = 4043571200
+Fibonacci::create_proof, max_steps = 519500, time = 3.571984541, peak_memory = 4043571200
+Fibonacci::create_proof, max_steps = 519500, time = 3.54209675, peak_memory = 4043571200
+Fibonacci::create_proof, max_steps = 519500, time = 3.569734125, peak_memory = 4043571200
+Fibonacci::create_proof, max_steps = 519500, time = 3.551589208, peak_memory = 4152672256
+Fibonacci::create_proof, max_steps = 519500, time = 3.559977084, peak_memory = 4152672256
+Fibonacci::create_proof, max_steps = 519500, time = 3.546023417, peak_memory = 4152672256
+Benchmarking fibonacci_max_steps_519500/prove_fibonacci/fibonacci_max_steps_519500: Analyzing
+fibonacci_max_steps_519500/prove_fibonacci/fibonacci_max_steps_519500
+                        time:   [3.5420 s 3.5516 s 3.5609 s]
+
+
+max_steps = 5100000, proof size = 23550709, hashes count = 47034
+Benchmarking fibonacci_max_steps_5100000/prove_fibonacci/fibonacci_max_steps_5100000
+Benchmarking fibonacci_max_steps_5100000/prove_fibonacci/fibonacci_max_steps_5100000: Warming up for 20.000 s
+Fibonacci::create_proof, max_steps = 5100000, time = 18.037203375, peak_memory = 10925621248
+
+Warning: Unable to complete 10 samples in 5.0s. You may wish to increase target time to 246.1s.
+Benchmarking fibonacci_max_steps_5100000/prove_fibonacci/fibonacci_max_steps_5100000: Collecting 10 samples in estimated 246.13 s (10 iterations)
+Fibonacci::create_proof, max_steps = 5100000, time = 19.6141345, peak_memory = 10925621248
+Fibonacci::create_proof, max_steps = 5100000, time = 50.808183375, peak_memory = 10925621248
+Fibonacci::create_proof, max_steps = 5100000, time = 17.997208917000002, peak_memory = 11034066944
+Fibonacci::create_proof, max_steps = 5100000, time = 19.121736333, peak_memory = 11034066944
+Fibonacci::create_proof, max_steps = 5100000, time = 20.906237459, peak_memory = 11163631616
+Fibonacci::create_proof, max_steps = 5100000, time = 18.118608416, peak_memory = 11163631616
+Fibonacci::create_proof, max_steps = 5100000, time = 40.272231417, peak_memory = 11163631616
+Fibonacci::create_proof, max_steps = 5100000, time = 18.029554833, peak_memory = 11275255808
+Fibonacci::create_proof, max_steps = 5100000, time = 21.513636166, peak_memory = 11338956800
+Fibonacci::create_proof, max_steps = 5100000, time = 18.42917075, peak_memory = 11338956800
+Benchmarking fibonacci_max_steps_5100000/prove_fibonacci/fibonacci_max_steps_5100000: Analyzing
+fibonacci_max_steps_5100000/prove_fibonacci/fibonacci_max_steps_5100000
+                        time:   [18.924 s 24.481 s 31.983 s]
 Found 2 outliers among 10 measurements (20.00%)
   2 (20.00%) high severe
 
-
-max_steps = 2097152, proof size = 22460133, hashes count = 45240
-Benchmarking fibonacci_max_steps_2097152/prove_fibonacci/fibonacci_max_steps_2097152
-Benchmarking fibonacci_max_steps_2097152/prove_fibonacci/fibonacci_max_steps_2097152: Warming up for 20.000 s
-Fibonacci::create_proof, max_steps = 2097152, time = 9.630113667, peak_memory = 6437863424
-Fibonacci::create_proof, max_steps = 2097152, time = 10.444509458, peak_memory = 6437863424
-Fibonacci::create_proof, max_steps = 2097152, time = 9.683636625, peak_memory = 6437863424
-
-Warning: Unable to complete 10 samples in 5.0s. You may wish to increase target time to 167.4s.
-Benchmarking fibonacci_max_steps_2097152/prove_fibonacci/fibonacci_max_steps_2097152: Collecting 10 samples in estimated 167.38 s (10 iterations)
-Fibonacci::create_proof, max_steps = 2097152, time = 9.752417958, peak_memory = 6437863424
-Fibonacci::create_proof, max_steps = 2097152, time = 9.621939541, peak_memory = 6437863424
-Fibonacci::create_proof, max_steps = 2097152, time = 9.700616625, peak_memory = 6437863424
-Fibonacci::create_proof, max_steps = 2097152, time = 11.064300291, peak_memory = 6437863424
-Fibonacci::create_proof, max_steps = 2097152, time = 10.369130167, peak_memory = 6756040704
-Fibonacci::create_proof, max_steps = 2097152, time = 10.023321042, peak_memory = 6756040704
-Fibonacci::create_proof, max_steps = 2097152, time = 9.833352583, peak_memory = 6756040704
-Fibonacci::create_proof, max_steps = 2097152, time = 9.937649125, peak_memory = 6768099328
-Fibonacci::create_proof, max_steps = 2097152, time = 10.375423375, peak_memory = 6768099328
-Fibonacci::create_proof, max_steps = 2097152, time = 10.007743959, peak_memory = 6768099328
-Benchmarking fibonacci_max_steps_2097152/prove_fibonacci/fibonacci_max_steps_2097152: Analyzing
-fibonacci_max_steps_2097152/prove_fibonacci/fibonacci_max_steps_2097152
-                        time:   [9.8434 s 10.069 s 10.345 s]
-                        change: [-63.382% -40.217% -0.3759%] (p = 0.18 > 0.05)
-                        No change in performance detected.
-Found 1 outliers among 10 measurements (10.00%)
-  1 (10.00%) high mild
-
-
-max_steps = 4194304, proof size = 23550709, hashes count = 47034
-Benchmarking fibonacci_max_steps_4194304/prove_fibonacci/fibonacci_max_steps_4194304
-Benchmarking fibonacci_max_steps_4194304/prove_fibonacci/fibonacci_max_steps_4194304: Warming up for 20.000 s
-Fibonacci::create_proof, max_steps = 4194304, time = 17.869245833, peak_memory = 11052875776
-
-Warning: Unable to complete 10 samples in 5.0s. You may wish to increase target time to 240.8s.
-Benchmarking fibonacci_max_steps_4194304/prove_fibonacci/fibonacci_max_steps_4194304: Collecting 10 samples in estimated 240.84 s (10 iterations)
-Fibonacci::create_proof, max_steps = 4194304, time = 17.810574875, peak_memory = 11277287424
-Fibonacci::create_proof, max_steps = 4194304, time = 19.646444458, peak_memory = 11277287424
-Fibonacci::create_proof, max_steps = 4194304, time = 17.973145792, peak_memory = 11472027648
-Fibonacci::create_proof, max_steps = 4194304, time = 18.201327834, peak_memory = 11472027648
-Fibonacci::create_proof, max_steps = 4194304, time = 132.37546875, peak_memory = 11472027648
-Fibonacci::create_proof, max_steps = 4194304, time = 31.141305958, peak_memory = 11472027648
-Fibonacci::create_proof, max_steps = 4194304, time = 17.907864833, peak_memory = 11472027648
-Fibonacci::create_proof, max_steps = 4194304, time = 18.175228416, peak_memory = 11472027648
-Fibonacci::create_proof, max_steps = 4194304, time = 18.880417166, peak_memory = 11472027648
-Command terminated by signal 2
-	Command being timed: "cargo bench fibonacci"
-	User time (seconds): 535.79
-	System time (seconds): 15.47
-	Percent of CPU this job got: 60%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 15:09.77
+thread 'main' panicked at ceno_zkvm/benches/fibonacci.rs:63:18:
+verify proof return with error: VerifyError("ecall/halt num_instances=1, expected=0")
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+error: bench failed, to rerun pass `--bench fibonacci`
+Command exited with non-zero status 101
+	Command being timed: "cargo bench --bench fibonacci"
+	User time (seconds): 4113.53
+	System time (seconds): 687.53
+	Percent of CPU this job got: 521%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 15:19.78
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 1225872
+	Maximum resident set size (kbytes): 27073744
 	Average resident set size (kbytes): 0
-	Major (requiring I/O) page faults: 8346
-	Minor (reclaiming a frame) page faults: 2868093
-	Voluntary context switches: 3338
-	Involuntary context switches: 460655
+	Major (requiring I/O) page faults: 279
+	Minor (reclaiming a frame) page faults: 15869213
+	Voluntary context switches: 538
+	Involuntary context switches: 13482177
 	Swaps: 0
 	File system inputs: 0
 	File system outputs: 0
 	Socket messages sent: 0
 	Socket messages received: 0
-	Signals delivered: 120
+	Signals delivered: 7
 	Page size (bytes): 16384
-	Exit status: 0
+	Exit status: 101
