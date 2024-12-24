@@ -42,10 +42,10 @@ jolt-fib:
 	gtime -v cargo run --release -p fibonacci -- 1000 > ../results/jolt_fibonacci_n1000.log 2>&1 && \
 	gtime -v cargo run --release -p fibonacci -- 10000 > ../results/jolt_fibonacci_n10000.log 2>&1 && \
 	gtime -v cargo run --release -p fibonacci -- 100000 > ../results/jolt_fibonacci_n100000.log 2>&1 && \
-	gtime -v cargo run --release -p fibonacci -- 110000 > ../results/jolt_fibonacci_n110000.log 2>&1 && \
-	gtime -v cargo run --release -p fibonacci -- 120000 > ../results/jolt_fibonacci_n120000.log 2>&1 && \
-	gtime -v cargo run --release -p fibonacci -- 130000 > ../results/jolt_fibonacci_n130000.log 2>&1 && \
-	gtime -v cargo run --release -p fibonacci -- 140000 > ../results/jolt_fibonacci_n140000.log 2>&1
+	gtime -v cargo run --release -p fibonacci -- 200000 > ../results/jolt_fibonacci_n110000.log 2>&1 && \
+	gtime -v cargo run --release -p fibonacci -- 300000 > ../results/jolt_fibonacci_n120000.log 2>&1 && \
+	gtime -v cargo run --release -p fibonacci -- 400000 > ../results/jolt_fibonacci_n130000.log 2>&1 && \
+	gtime -v cargo run --release -p fibonacci -- 500000 > ../results/jolt_fibonacci_n140000.log 2>&1
 
 jolt-matrix-ops:
 	cd jolt && \
@@ -78,6 +78,9 @@ nexus-matrix-ops:
 
 ceno-fib:
 	cd ceno/ceno_zkvm && gtime -v cargo bench --bench fibonacci > ../../results/ceno_fibonacci.log 2>&1
+
+ceno-fib-final:
+	cd ceno/ceno_zkvm && gtime -v cargo bench --bench fibonacci > ../../results/ceno_fibonacci_final.log 2>&1
 
 ceno-matrix-ops:
 	cd ceno/ceno_zkvm && gtime -v cargo bench --bench matrix-ops > ../../results/ceno_matrix_ops.log 2>&1
