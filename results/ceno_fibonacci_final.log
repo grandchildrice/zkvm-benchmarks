@@ -1,0 +1,59 @@
+   Compiling ceno-examples v0.1.0 (/Users/masatotsutsumi/zkvm-benchmarks/ceno/examples-builder)
+   Compiling ceno_zkvm v0.1.0 (/Users/masatotsutsumi/zkvm-benchmarks/ceno/ceno_zkvm)
+    Finished `bench` profile [optimized] target(s) in 26.54s
+     Running benches/fibonacci.rs (/Users/masatotsutsumi/zkvm-benchmarks/ceno/target/release/deps/fibonacci-c996ff9d188bceb2)
+Gnuplot not found, using plotters backend
+
+max_steps = 10000000, proof size = 24693061, hashes count = 48900
+Benchmarking fibonacci_max_steps_10000000/prove_fibonacci/fibonacci_max_steps_10000000
+Benchmarking fibonacci_max_steps_10000000/prove_fibonacci/fibonacci_max_steps_10000000: Warming up for 20.000 s
+Fibonacci::create_proof, max_steps = 10000000, time = 35.245885666, peak_memory = 22069084160
+
+Warning: Unable to complete 10 samples in 5.0s. You may wish to increase target time to 422.5s.
+Benchmarking fibonacci_max_steps_10000000/prove_fibonacci/fibonacci_max_steps_10000000: Collecting 10 samples in estimated 422.50 s (10 iterations)
+Fibonacci::create_proof, max_steps = 10000000, time = 35.39598275, peak_memory = 22069084160
+Fibonacci::create_proof, max_steps = 10000000, time = 35.187525083, peak_memory = 22069084160
+Fibonacci::create_proof, max_steps = 10000000, time = 35.189593583, peak_memory = 22069084160
+Fibonacci::create_proof, max_steps = 10000000, time = 35.354735375, peak_memory = 22069084160
+Fibonacci::create_proof, max_steps = 10000000, time = 35.02749225, peak_memory = 22069084160
+Fibonacci::create_proof, max_steps = 10000000, time = 35.410703417, peak_memory = 22069084160
+Fibonacci::create_proof, max_steps = 10000000, time = 35.519748958, peak_memory = 22069084160
+Fibonacci::create_proof, max_steps = 10000000, time = 37.138919333, peak_memory = 22069084160
+Fibonacci::create_proof, max_steps = 10000000, time = 35.9935695, peak_memory = 22069084160
+Fibonacci::create_proof, max_steps = 10000000, time = 35.81785725, peak_memory = 22069084160
+Benchmarking fibonacci_max_steps_10000000/prove_fibonacci/fibonacci_max_steps_10000000: Analyzing
+fibonacci_max_steps_10000000/prove_fibonacci/fibonacci_max_steps_10000000
+                        time:   [35.305 s 35.604 s 36.004 s]
+                        change: [-0.3484% +0.8491% +2.1507%] (p = 0.24 > 0.05)
+                        No change in performance detected.
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high mild
+
+thread 'main' panicked at ceno_zkvm/benches/fibonacci.rs:64:18:
+verify proof return with error: VerifyError("ecall/halt num_instances=1, expected=0")
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+error: bench failed, to rerun pass `--bench fibonacci`
+Command exited with non-zero status 101
+	Command being timed: "cargo bench --bench fibonacci"
+	User time (seconds): 4366.54
+	System time (seconds): 207.01
+	Percent of CPU this job got: 768%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 9:55.30
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 25790768
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 8572
+	Minor (reclaiming a frame) page faults: 27762704
+	Voluntary context switches: 1036
+	Involuntary context switches: 6931735
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 7
+	Page size (bytes): 16384
+	Exit status: 101
