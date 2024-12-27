@@ -1,0 +1,35 @@
+# ベースイメージとして Rust を使用
+FROM --platform=linux/amd64 rust:latest
+
+# 必要なツールをインストール
+RUN apt-get update && apt-get install -y \
+    curl \
+    bash \
+    cmake \
+    ninja-build \
+    build-essential \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# RISC Zero のリポジトリをクローン
+RUN git clone --branch main https://github.com/risc0/risc0.git /risc0
+WORKDIR /risc0
+
+# RUN cargo install --path risc0/cargo-risczero
+# RUN cargo risczero --version
+
+# rzup をインストール
+RUN curl -L https://risczero.com/install | bash
+
+# ENV RISC0_BIN_DIR="/root/.risc0/bin"
+# ENV PATH="${PATH}:${RISC0_BIN_DIR}"
+# RUN mkdir -p ${RZUP_BIN_DIR}
+# RUN rm -f ${RZUP_BIN_DIR}/cargo-risczero
+
+# RISC Zero ツールチェインをインストール
+# RUN rzup install
+
+# # 必要であれば C++ toolchain もインストール
+# RUN rzup install cpp
+
+# 作業ディレクトリを設定
+# WORKDIR /risc0/benchmarks

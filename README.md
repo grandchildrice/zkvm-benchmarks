@@ -79,6 +79,130 @@ make nexus-fib
 make ceno-fib
 ```
 
+### Run on Docker
+
+#### SP1
+
+```bash
+docker build -f Dockerfile-sp1 -t sp1-example .
+docker run -it --rm --cpus=2 sp1-example /bin/bash
+cd examples/fibonacci/program && cargo prove build && cd ../script && cargo run --release
+```
+
+To record the proof generation time, change the file `examples/fibonacci/script/src/main.rs` like:
+
+```rust
+use sp1_sdk::{include_elf, utils, ProverClient, SP1ProofWithPublicValues, SP1Stdin};
+use std::time::Instant;
+
+/// The ELF we want to execute inside the zkVM.
+const ELF: &[u8] = include_elf!("fibonacci-program");
+
+fn main() {
+    // Setup logging.
+    utils::setup_logger();
+
+    // Create an input stream and write '500' to it.
+    let n = 1000u32;
+
+    // The input stream that the program will read from using `sp1_zkvm::io::read`. Note that the
+    // types of the elements in the input stream must match the types being read in the program.
+    let mut stdin = SP1Stdin::new();
+    stdin.write(&n);
+
+    // Create a `ProverClient` method.
+    let client = ProverClient::from_env();
+
+    // Execute the program using the `ProverClient.execute` method, without generating a proof.
+    let (_, report) = client.execute(ELF, &stdin).run().unwrap();
+    println!("executed program with {} cycles", report.total_instruction_count());
+
+    // Generate the proof for the given program and input.
+    let (pk, vk) = client.setup(ELF);
+    let start = Instant::now();
+    let mut proof = client.prove(&pk, &stdin).run().unwrap();
+    let duration = start.elapsed();
+    println!("proof generation took {:?}", duration);
+
+    println!("generated proof");
+
+    // Read and verify the output.
+    //
+    // Note that this output is read from values committed to in the program using
+    // `sp1_zkvm::io::commit`.
+    let _ = proof.public_values.read::<u32>();
+    let a = proof.public_values.read::<u32>();
+    let b = proof.public_values.read::<u32>();
+
+    println!("a: {}", a);
+    println!("b: {}", b);
+
+    // Verify proof and public values
+    client.verify(&proof, &vk).expect("verification failed");
+
+    // Test a round trip of proof serialization and deserialization.
+    proof.save("proof-with-pis.bin").expect("saving proof failed");
+    let deserialized_proof =
+        SP1ProofWithPublicValues::load("proof-with-pis.bin").expect("loading proof failed");
+
+    // Verify the deserialized proof.
+    client.verify(&deserialized_proof, &vk).expect("verification failed");
+
+    println!("successfully generated and verified proof for the program!")
+}
+```
+
+#### RISC0
+
+```bash
+docker build -f Dockerfile-RISC0 -t risc0-example .
+docker run -it --rm --cpus=2 risc0-example /bin/bash
+rzup install # don't care if you fail this command on running symlink cargo-risczero toolchain
+cd benchmarks && cargo run --release -- fibonacci
+```
+
+#### Nexus
+
+```bash
+docker build -f Dockerfile-nexus -t nexus-example .
+docker run -it --rm --cpus=2 nexus-example /bin/bash
+cargo nexus prove --bin fib3
+```
+
+To record the proof generation time, change the file `examples/src/bin/fib3.rs` like:
+
+```rust
+// Used in the CI as a small example that uses memory store
+#![cfg_attr(target_arch = "riscv32", no_std, no_main)]
+
+fn fib(n: u32) -> u32 {
+    let mut a = 0;
+    let mut b = 1;
+    for _ in 0..n {
+        let mut c = a + b;
+        c %= 7919;
+        a = b;
+        b = c;
+    }
+
+    b
+}
+
+#[nexus_rt::main]
+fn main() {
+    let n = 1000;
+    let result = fib(n);
+}
+```
+
+#### Ceno
+
+```bash
+docker build -f Dockerfile-ceno -t ceno-example .
+docker run -it --rm --cpus=2 ceno-example /bin/bash
+cd ceno_zkvm && cargo bench --bench fibonacci
+```
+
 ### Clean All Projects
 
 Clean build artifacts for all submodules:

@@ -1,0 +1,23 @@
+FROM rust:latest
+
+# Install necessary dependencies
+RUN apt-get update && apt-get install -y \
+    curl \
+    bash \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Clone the repository
+RUN git clone https://github.com/succinctlabs/sp1.git /sp1
+WORKDIR /sp1
+
+# Install sp1
+RUN curl -L https://sp1.succinct.xyz | bash
+
+# Manually add SP1_BIN_DIR to the PATH for the current shell
+ENV SP1_BIN_DIR="/root/.sp1/bin"
+ENV PATH="${PATH}:${SP1_BIN_DIR}"
+
+# Run sp1up
+RUN sp1up
+
+WORKDIR /sp1
