@@ -120,7 +120,7 @@ fn main() {
     // Generate the proof for the given program and input.
     let (pk, vk) = client.setup(ELF);
     let start = Instant::now();
-    let mut proof = client.prove(&pk, &stdin).run().unwrap();
+    let mut proof = client.prove(&pk, &stdin).compressed().run().unwrap();
     let duration = start.elapsed();
     println!("proof generation took {:?}", duration);
 
@@ -166,7 +166,7 @@ cd benchmarks && cargo run --release -- fibonacci
 ```bash
 docker build -f Dockerfile-nexus -t nexus-example .
 docker run -it --rm --cpus=2 nexus-example /bin/bash
-cargo nexus prove --bin fib3
+cd examples && cargo nexus prove --bin fib3
 ```
 
 To record the proof generation time, change the file `examples/src/bin/fib3.rs` like:
