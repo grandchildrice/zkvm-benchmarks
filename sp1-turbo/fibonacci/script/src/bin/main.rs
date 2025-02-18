@@ -35,8 +35,8 @@ fn main() {
         stdin.write(&n);
         println!("n: {}", n);
         // Setup the program for proving.
-        let (pk, vk) = client.setup(FIBONACCI_ELF);
-        let proof = client
+        let (pk, _vk) = client.setup(FIBONACCI_ELF);
+        let _proof = client
             .prove(&pk, &stdin)
             .run()
             .expect("failed to generate proof");

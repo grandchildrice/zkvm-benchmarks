@@ -1,0 +1,10 @@
+[package]
+name = "ethblock-utils"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+revm = {git = "https://github.com/bluealloy/revm", default-features = false, features = ["serde"]}
+alloy-eip2930 = { version = "0.1.0", features = ["serde"] } ## revmが依存しているAccessListのSerdeを有効にする
+serde = "1.0.217"

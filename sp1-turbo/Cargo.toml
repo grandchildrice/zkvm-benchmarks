@@ -9,8 +9,13 @@ members = [
   "ecdsa/lib",
   "ecdsa/program",
   "ecdsa/script",
+  "ethblock/helper",
+  "ethblock/utils",
+  "ethblock/lib",
+  "ethblock/program",
+  "ethblock/script",
 ]
 resolver = "2"
 
 [workspace.dependencies]
-alloy-sol-types = "0.7.7"
+alloy-sol-types = "0.8"
