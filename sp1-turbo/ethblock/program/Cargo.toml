@@ -4,7 +4,6 @@ name = "ethblock-program"
 edition = "2021"
 
 [dependencies]
-alloy-sol-types = { workspace = true }
 sp1-zkvm = "4.1.0"
 ethblock-lib = { path = "../lib" }
 

@@ -18,6 +18,3 @@ members = [
   "transfer-eth/script"
 ]
 resolver = "2"
-
-[workspace.dependencies]
-alloy-sol-types = "0.8"

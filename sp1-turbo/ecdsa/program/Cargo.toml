@@ -4,7 +4,6 @@ name = "ecdsa-program"
 edition = "2021"
 
 [dependencies]
-alloy-sol-types = { workspace = true }
 sp1-zkvm = "4.1.0"
 ecdsa-lib = { path = "../lib" }
 

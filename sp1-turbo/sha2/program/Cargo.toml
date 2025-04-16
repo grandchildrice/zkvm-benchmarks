@@ -4,6 +4,5 @@ name = "sha2-program"
 edition = "2021"
 
 [dependencies]
-alloy-sol-types = { workspace = true }
 sp1-zkvm = "4.1.0"
 sha2-lib = { path = "../lib" }

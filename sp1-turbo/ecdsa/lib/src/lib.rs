@@ -1,17 +1,15 @@
-use alloy_sol_types::sol;
 use k256::{
     ecdsa::{signature::Verifier, Signature, VerifyingKey},
     elliptic_curve::sec1::EncodedPoint,
     Secp256k1,
 };
+use serde::{Deserialize, Serialize};
 
 extern crate alloc;
 
-sol! {
-    /// The public values encoded as a struct that can be easily deserialized inside Solidity.
-    struct PublicValuesStruct {
-        bool result;
-    }
+#[derive(Serialize, Deserialize)]
+pub struct PublicValuesStruct {
+    pub result: bool,
 }
 
 const MESSAGE: &[u8] = include_bytes!("../../../../helper/ecdsa_signature/message.txt");

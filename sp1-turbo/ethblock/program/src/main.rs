@@ -8,17 +8,13 @@
 #![no_main]
 sp1_zkvm::entrypoint!(main);
 
-use alloy_sol_types::SolType;
 use ethblock_lib::{trace_block, PublicValuesStruct};
 
 fn main() {
-
     let num_txs = sp1_zkvm::io::read::<usize>();
 
     let b = trace_block(num_txs);
     assert!(b);
 
-    let bytes = PublicValuesStruct::abi_encode(&PublicValuesStruct { result: b });
-
-    sp1_zkvm::io::commit_slice(&bytes);
+    sp1_zkvm::io::commit(&PublicValuesStruct { result: b });
 }

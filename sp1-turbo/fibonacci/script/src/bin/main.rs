@@ -11,7 +11,6 @@
 //! ```
 //!
 
-use alloy_sol_types::SolType;
 use fibonacci_lib::PublicValuesStruct;
 use sp1_sdk::{include_elf, ProverClient, SP1Stdin};
 use std::time::Duration;
@@ -88,7 +87,7 @@ fn bench_fib(n: u32) -> BenchResult {
     println!("Program executed successfully.");
 
     // Read the output.
-    let decoded = PublicValuesStruct::abi_decode(output.as_slice(), true).unwrap();
+    let decoded: PublicValuesStruct = bincode::deserialize(output.as_ref()).unwrap();
     let PublicValuesStruct { n, a, b } = decoded;
     println!("n: {}", n);
     println!("a: {}", a);

@@ -15,5 +15,3 @@ ethblock-utils = {path = "../../../ethblock-utils"}
 # serialize
 bincode = "1.3.3"
 serde = "1.0.217"
-
-alloy-sol-types = { workspace = true }

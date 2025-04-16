@@ -8,7 +8,6 @@
 #![no_main]
 sp1_zkvm::entrypoint!(main);
 
-use alloy_sol_types::SolType;
 use ecdsa_lib::{verify, PublicValuesStruct};
 
 fn main() {
@@ -16,7 +15,5 @@ fn main() {
 
     assert!(b);
 
-    let bytes = PublicValuesStruct::abi_encode(&PublicValuesStruct { result: b });
-
-    sp1_zkvm::io::commit_slice(&bytes);
+    sp1_zkvm::io::commit(&PublicValuesStruct { result: b });
 }

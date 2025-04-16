@@ -8,14 +8,11 @@
 #![no_main]
 sp1_zkvm::entrypoint!(main);
 
-use alloy_sol_types::SolType;
 use sha2_lib::{sha2, PublicValuesStruct};
 
 pub fn main() {
     let input: Vec<u8> = sp1_zkvm::io::read();
     let result = sha2(input.clone());
 
-    let bytes = PublicValuesStruct::abi_encode(&PublicValuesStruct { input, result });
-
-    sp1_zkvm::io::commit_slice(&bytes);
+    sp1_zkvm::io::commit(&PublicValuesStruct { input, result });
 }
