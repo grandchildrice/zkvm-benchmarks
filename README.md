@@ -94,7 +94,7 @@ The following table summarizes the expected security level of the ZK-VMs in thes
 
 For FRI-STARKs related ZK-VMs, the security level is conjectured based on proximity gap proofs and "Toy Problem" related to FRI . This means the soundness is not proven in the traditional cryptographic sense [see paper](https://eprint.iacr.org/2024/1161.pdf).
 
-The security level is tunable: it can be increased by enlarging the proof size (e.g., increasing pow bits or number of queries) without increasing proving time, or by increasing proving time to allow for smaller proofs.
+The security level is tunable: either by increasing the number of queries, which will only increase the proof size ; or by increasing the number of PoW bits (grinding) or the blowup factor, which will only increase the proving time.
 
 ## Results
 
